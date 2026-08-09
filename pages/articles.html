@@ -1,0 +1,129 @@
+<div class="page__hero">
+  <h1>Articles</h1>
+  <p>Search the full text of every article on this site.</p>
+</div>
+
+<div class="articles-toolbar">
+  <input type="search" id="articles-search" placeholder="Search article text…" x-search instant>
+  <span id="articles-summary" class="articles-summary"></span>
+</div>
+
+<ul id="articles-list" class="articles-list"></ul>
+<p id="articles-status" class="articles-status">Loading articles…</p>
+
+<style>
+  .articles-toolbar { display: flex; align-items: center; gap: 1rem; margin: 1.5rem 0 1rem; flex-wrap: wrap; }
+  .articles-summary { color: var(--text-secondary); font-size: 0.85rem; }
+  .articles-status { color: var(--text-secondary); }
+  .articles-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.75rem; }
+  .article-row { border: 1px solid var(--border-color); border-radius: 8px; background: var(--bg-secondary); padding: 1rem 1.25rem; }
+  .article-row__title { margin: 0 0 0.35rem; font-size: 1.1rem; }
+  .article-row__title a { color: var(--text-primary); text-decoration: none; }
+  .article-row__title a:hover { color: var(--primary); text-decoration: underline; }
+  .article-row__excerpt { margin: 0 0 0.5rem; color: var(--text-secondary); font-size: 0.9rem; line-height: 1.5; }
+  .article-row__date { color: var(--text-secondary); font-size: 0.75rem; }
+  .article-row__match { color: var(--text-secondary); font-size: 0.85rem; font-style: italic; margin: 0.5rem 0 0; padding-top: 0.5rem; border-top: 1px solid var(--border-color); }
+  .article-row__match mark { background: color-mix(in srgb, var(--primary) 35%, transparent); color: inherit; border-radius: 2px; }
+</style>
+
+<script>
+(async function () {
+  const listEl = document.getElementById('articles-list');
+  const statusEl = document.getElementById('articles-status');
+  const summaryEl = document.getElementById('articles-summary');
+  const searchEl = document.getElementById('articles-search');
+
+  function escapeHtml(s) {
+    return String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  }
+
+  function stripHtml(html) {
+    return html
+      .replace(/<script[\s\S]*?<\/script>/gi, '')
+      .replace(/<style[\s\S]*?<\/style>/gi, '')
+      .replace(/<[^>]+>/g, ' ')
+      .replace(/&nbsp;/g, ' ')
+      .replace(/&[a-z]+;/gi, ' ')
+      .replace(/\s+/g, ' ')
+      .trim();
+  }
+
+  let articles = [];
+  try {
+    const res = await fetch('data/articles.json');
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const manifest = await res.json();
+
+    // Fetch each article's real page HTML once, so search matches the
+    // actual full text -- not just the short hand-written excerpt in the
+    // manifest, which would silently miss most of the article's content.
+    articles = await Promise.all(manifest.map(async (a) => {
+      let fullText = '';
+      try {
+        const pageRes = await fetch(`pages/${a.slug}.html`);
+        if (pageRes.ok) fullText = stripHtml(await pageRes.text());
+      } catch { /* search still works on title/excerpt if the page fetch fails */ }
+      return { ...a, fullText };
+    }));
+  } catch (err) {
+    statusEl.textContent = `Could not load articles: ${err.message}`;
+    return;
+  }
+
+  function findSnippet(fullText, query) {
+    const idx = fullText.toLowerCase().indexOf(query.toLowerCase());
+    if (idx === -1) return null;
+    const start = Math.max(0, idx - 60);
+    const end = Math.min(fullText.length, idx + query.length + 60);
+    const prefix = start > 0 ? '…' : '';
+    const suffix = end < fullText.length ? '…' : '';
+    const before = escapeHtml(fullText.slice(start, idx));
+    const match = escapeHtml(fullText.slice(idx, idx + query.length));
+    const after = escapeHtml(fullText.slice(idx + query.length, end));
+    return `${prefix}${before}<mark>${match}</mark>${after}${suffix}`;
+  }
+
+  function render() {
+    const q = searchEl.value.trim();
+    const results = !q
+      ? articles.map((a) => ({ ...a, snippet: null }))
+      : articles
+          .map((a) => ({ ...a, snippet: findSnippet(a.fullText, q) }))
+          .filter((a) =>
+            a.snippet ||
+            a.title.toLowerCase().includes(q.toLowerCase()) ||
+            a.excerpt.toLowerCase().includes(q.toLowerCase())
+          );
+
+    summaryEl.textContent = q
+      ? `${results.length} of ${articles.length} article${articles.length === 1 ? '' : 's'} match "${q}"`
+      : `${articles.length} article${articles.length === 1 ? '' : 's'}`;
+
+    if (!articles.length) {
+      statusEl.textContent = 'No articles yet.';
+      statusEl.style.display = '';
+      listEl.innerHTML = '';
+      return;
+    }
+    if (!results.length) {
+      statusEl.textContent = `No articles match "${q}".`;
+      statusEl.style.display = '';
+      listEl.innerHTML = '';
+      return;
+    }
+    statusEl.style.display = 'none';
+
+    listEl.innerHTML = results.map((a) => `
+      <li class="article-row">
+        <h3 class="article-row__title"><a href="${escapeHtml(a.url)}">${escapeHtml(a.title)}</a></h3>
+        <p class="article-row__excerpt">${escapeHtml(a.excerpt)}</p>
+        <span class="article-row__date">${escapeHtml(a.date)}</span>
+        ${a.snippet ? `<p class="article-row__match">${a.snippet}</p>` : ''}
+      </li>
+    `).join('');
+  }
+
+  render();
+  searchEl.addEventListener('input', render);
+})();
+</script>
