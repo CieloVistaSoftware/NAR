@@ -31,6 +31,27 @@
 <p id="issues-status" class="issues-status">Loading issues…</p>
 <div id="issues-grid" class="issues-grid"></div>
 
+<div id="issue-modal" class="issue-modal" hidden>
+  <div class="issue-modal__backdrop" id="issue-modal-backdrop"></div>
+  <div class="issue-modal__panel" role="dialog" aria-modal="true">
+    <button type="button" class="issue-modal__close" id="issue-modal-close" aria-label="Close">✕</button>
+    <div class="issue-modal__header">
+      <span id="modal-number" class="issue-card__number"></span>
+      <h2 id="modal-title"></h2>
+    </div>
+    <div class="issue-modal__meta">
+      <img id="modal-avatar" class="issue-card__avatar" src="" alt="">
+      <span>Author: <strong id="modal-author"></strong></span>
+      <span>Created: <strong id="modal-created"></strong></span>
+      <span>Last update: <strong id="modal-updated"></strong></span>
+    </div>
+    <div id="modal-labels" class="issue-card__labels"></div>
+    <p class="issue-modal__desc-label">Description</p>
+    <div id="modal-desc" class="issue-modal__desc"></div>
+    <a id="modal-github-link" href="#" target="_blank" rel="noopener" class="new-issue-btn new-issue-btn--secondary">View on GitHub →</a>
+  </div>
+</div>
+
 <style>
   .issues-toolbar { display: flex; align-items: center; gap: 1rem; margin: 1.5rem 0 1rem; flex-wrap: wrap; }
   .issues-search { background: var(--bg-secondary); color: var(--text-primary); border: 1px solid var(--border-color); border-radius: 6px; padding: 0.4rem 0.75rem; min-width: 240px; flex: 1; }
@@ -57,6 +78,17 @@
   .issue-card__meta { display: flex; align-items: center; gap: 0.5rem; margin-top: auto; padding-top: 0.6rem; border-top: 1px solid var(--border-color); font-size: 0.75rem; color: var(--text-secondary); }
   .issue-card__avatar { width: 20px; height: 20px; border-radius: 50%; }
   .issue-card__dates { display: flex; flex-direction: column; gap: 0.1rem; margin-left: auto; text-align: right; }
+  .issue-card { cursor: pointer; transition: border-color 0.15s; }
+  .issue-card:hover { border-color: var(--primary); }
+
+  .issue-modal { position: fixed; inset: 0; z-index: 100; display: flex; align-items: center; justify-content: center; padding: 1.5rem; }
+  .issue-modal__backdrop { position: absolute; inset: 0; background: rgba(0,0,0,0.6); }
+  .issue-modal__panel { position: relative; background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: 10px; padding: 1.75rem; max-width: 640px; width: 100%; max-height: 85vh; overflow-y: auto; display: flex; flex-direction: column; gap: 0.9rem; }
+  .issue-modal__close { position: absolute; top: 0.9rem; right: 0.9rem; background: var(--bg-tertiary); color: var(--text-primary); border: none; border-radius: 50%; width: 28px; height: 28px; cursor: pointer; font-size: 0.9rem; }
+  .issue-modal__header h2 { margin: 0.25rem 0 0; font-size: 1.3rem; }
+  .issue-modal__meta { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem; font-size: 0.85rem; color: var(--text-secondary); }
+  .issue-modal__desc-label { margin: 0; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--text-secondary); }
+  .issue-modal__desc { white-space: pre-wrap; line-height: 1.6; color: var(--text-primary); }
 </style>
 
 <script>
@@ -100,10 +132,10 @@
       ).join('');
       const author = issue.user || {};
       return `
-        <article class="issue-card">
+        <article class="issue-card" data-number="${issue.number}" tabindex="0" role="button" aria-label="View issue #${issue.number}: ${escapeHtml(issue.title)}">
           <div class="issue-card__header">
             <span class="issue-card__number">#${issue.number}</span>
-            <h3 class="issue-card__title"><a href="${issue.html_url}" target="_blank" rel="noopener">${escapeHtml(issue.title)}</a></h3>
+            <h3 class="issue-card__title">${escapeHtml(issue.title)}</h3>
           </div>
           <p class="issue-card__desc">${escapeHtml(issue.body || 'No description provided.')}</p>
           ${labels ? `<div class="issue-card__labels">${labels}</div>` : ''}
@@ -117,7 +149,39 @@
           </div>
         </article>`;
     }).join('');
+
+    gridEl.querySelectorAll('.issue-card').forEach((card) => {
+      const openThis = () => openModal(Number(card.dataset.number));
+      card.addEventListener('click', openThis);
+      card.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openThis(); }
+      });
+    });
   }
+
+  const modal = document.getElementById('issue-modal');
+  function openModal(number) {
+    const issue = allIssues.find((i) => i.number === number);
+    if (!issue) return;
+    const author = issue.user || {};
+    document.getElementById('modal-number').textContent = `#${issue.number}`;
+    document.getElementById('modal-title').textContent = issue.title;
+    document.getElementById('modal-avatar').src = author.avatar_url || '';
+    document.getElementById('modal-avatar').style.display = author.avatar_url ? '' : 'none';
+    document.getElementById('modal-author').textContent = author.login || 'unknown';
+    document.getElementById('modal-created').textContent = fmtDate(issue.created_at);
+    document.getElementById('modal-updated').textContent = fmtDate(issue.updated_at);
+    document.getElementById('modal-desc').textContent = issue.body || 'No description provided.';
+    document.getElementById('modal-github-link').href = issue.html_url;
+    document.getElementById('modal-labels').innerHTML = (issue.labels || []).map((l) =>
+      `<span class="issue-card__label" style="background:#${l.color || '333'}22;color:#${l.color || '999'}">${escapeHtml(l.name)}</span>`
+    ).join('');
+    modal.hidden = false;
+  }
+  function closeModal() { modal.hidden = true; }
+  document.getElementById('issue-modal-close').addEventListener('click', closeModal);
+  document.getElementById('issue-modal-backdrop').addEventListener('click', closeModal);
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !modal.hidden) closeModal(); });
 
   searchEl.addEventListener('input', render);
 
