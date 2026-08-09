@@ -43,9 +43,14 @@ export default class WBSite {
       document.title = this.config.searchEngineOptimization?.pageTitle || this.config.branding.companyName;
       this.updateFavicon();
       
+      // Same fix as navigateTo() below: this used to require pageParam match
+      // a literal navigationMenu entry, silently ignoring the URL and
+      // defaulting to home for any real content page (e.g. this site's
+      // articles) that's deliberately not a nav item. A genuinely bad page
+      // param still 404s cleanly via navigateTo()'s own fetch-failure path.
       const params = new URLSearchParams(window.location.search);
       const pageParam = params.get('page');
-      if (pageParam && this.config.navigationMenu.find(n => n.menuItemId === pageParam)) {
+      if (pageParam) {
         this.currentPage = pageParam;
       }
 
@@ -502,9 +507,15 @@ export default class WBSite {
       this.closeMobileNav();
     }
     
-    if (!this.config.navigationMenu.find(n => n.menuItemId === pageId)) {
-      pageId = 'home';
-    }
+    // Used to hard-fall-back to 'home' for any pageId not literally present
+    // in navigationMenu -- but real content pages that are deliberately NOT
+    // nav items (e.g. this site's articles, reached only via in-page links)
+    // got silently swapped for the home page instead of their own content.
+    // Confirmed live: ?page=introduction always rendered the home page.
+    // The actual safety net for a genuinely bad pageId already exists a few
+    // lines down (the fetch failure branch renders a real 404), so this
+    // upfront gate was redundant for good IDs and actively wrong for valid
+    // non-nav ones.
     if (pageId === 'schema-viewer') {
       window.open('schema-viewer.html', '_blank');
       return;

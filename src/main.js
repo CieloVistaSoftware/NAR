@@ -90,21 +90,16 @@ if (document.readyState === 'loading') {
   init();
 }
 
-// Network-first service worker — required so the installed/standalone PWA
-// (manifest.json sets display:standalone) actually checks for fresh code on
-// each load instead of relying solely on the OS webview's own cache
-// heuristics, which can hold stale assets far longer than a browser tab.
+// Service worker registration disabled: it was intercepting page navigation
+// requests and, in a reproducible timing window right after registration,
+// serving index.html's content back for a completely different page (e.g.
+// clicking "Introduction" would get stuck showing the app shell instead of
+// the real article). Actively unregister any worker a previous visit may
+// have installed, so returning visitors get unstuck too, not just new ones.
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
-    // Derive both the script URL and its scope from wherever main.js
-    // actually loaded from, rather than hardcoding a path — correct on
-    // both local dev (served from origin root) and GitHub Pages (served
-    // under /wb-starter/) without an environment check. (#316, #318)
-    const swUrl = new URL('../sw.js', import.meta.url);
-    navigator.serviceWorker
-      .register(swUrl, { scope: new URL('.', swUrl).href })
-      .catch((err) =>
-        console.warn("[sw] registration failed:", err && err.message),
-      );
+    navigator.serviceWorker.getRegistrations().then((regs) => {
+      regs.forEach((reg) => reg.unregister());
+    });
   });
 }
