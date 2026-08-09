@@ -1,8 +1,8 @@
 {
   "branding": {
-    "companyName": "Firsthand",
-    "headerSubtitle": "Articles from direct experience",
-    "headerLogoImage": "<span style='font-size:1.4rem;line-height:1;'>🖋️</span>",
+    "companyName": "NAR",
+    "headerSubtitle": "Examining the New Apostolic Reformation",
+    "headerLogoImage": "<img src='favicon.svg' alt='Cross' style='height: 1.8rem; width: auto;' />",
     "browserTabIcon": "favicon.svg",
     "colorTheme": "slate",
     "autoInjectComponents": true,
@@ -34,6 +34,12 @@
       "menuItemText": "Doc",
       "menuItemEmoji": "📖",
       "pageToLoad": "docs"
+    },
+    {
+      "menuItemId": "issues",
+      "menuItemText": "Issues",
+      "menuItemEmoji": "🐛",
+      "pageToLoad": "issues"
     },
     {
       "menuItemId": "error-log",
@@ -165,8 +171,8 @@
   ],
 
   "searchEngineOptimization": {
-    "pageTitle": "Firsthand - Articles from direct experience",
-    "pageDescription": "Long-form articles drawing on firsthand, lived experience -- searchable, sourced, and written to be read closely.",
-    "seoKeywords": ["articles", "firsthand experience", "long-form", "search"]
+    "pageTitle": "NAR - Examining the New Apostolic Reformation",
+    "pageDescription": "A critical, sourced examination of the New Apostolic Reformation's theology and practice, written from firsthand experience with the wider charismatic movement.",
+    "seoKeywords": ["New Apostolic Reformation", "NAR", "charismatic movement", "theology", "critique"]
   }
 }

@@ -1,3 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-  <polygon points="50,5 61,35 95,35 68,57 79,90 50,70 21,90 32,57 5,35 39,35" fill="#3b82f6"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="crossGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8b95a8"/>
+      <stop offset="100%" stop-color="#5b6472"/>
+    </linearGradient>
+  </defs>
+  <rect x="27" y="8" width="10" height="48" rx="3" fill="url(#crossGrad)"/>
+  <rect x="10" y="22" width="44" height="10" rx="3" fill="url(#crossGrad)"/>
 </svg>
