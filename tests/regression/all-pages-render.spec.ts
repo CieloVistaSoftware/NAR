@@ -9,7 +9,7 @@ import { test, expect } from '@playwright/test';
  * (not the ad hoc manual browser checks that kept getting confused by
  * stacked navigation history across many test tabs).
  */
-const SPA_PAGES = ['home', 'about', 'docs', 'issues', 'introduction', 'nar', 'articles'];
+const SPA_PAGES = ['home', 'about', 'docs', 'issues', 'introduction', 'nar', 'articles', 'test'];
 
 for (const page of SPA_PAGES) {
   test(`?page=${page} renders real content, not stuck on "Loading..."`, async ({ page: browserPage }) => {

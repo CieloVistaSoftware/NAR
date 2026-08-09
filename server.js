@@ -4,7 +4,7 @@ import { fileURLToPath } from 'url';
 import express from 'express';
 import compression from 'compression';
 import { WebSocketServer } from 'ws';
-import { exec, execSync, execFileSync } from 'child_process';
+import { exec, execSync, execFileSync, execFile } from 'child_process';
 import { marked } from 'marked';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -814,6 +814,66 @@ app.post("/api/run-perf-tests", (req, res) => {
       exitCode: error ? error.code : 0
     });
   });
+});
+
+// Test runner (Test menu page): lists real *.spec.ts files under tests/ and
+// runs one on demand. The run endpoint takes a file path from the client, so
+// it MUST be re-validated against a freshly-scanned allowlist server-side
+// (never trust the client's own copy of the list) before it's allowed
+// anywhere near a spawned process -- execFile with an argv array (never a
+// shell string) so even a validated-but-crafted path can't break out via
+// shell metacharacters.
+function discoverTestFiles(dir = path.join(rootDir, 'tests'), base = rootDir) {
+  const results = [];
+  for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+    const full = path.join(dir, entry.name);
+    if (entry.isDirectory()) {
+      results.push(...discoverTestFiles(full, base));
+    } else if (entry.isFile() && entry.name.endsWith('.spec.ts')) {
+      results.push(path.relative(base, full).split(path.sep).join('/'));
+    }
+  }
+  return results;
+}
+
+app.get('/api/tests/list', (req, res) => {
+  try {
+    const files = discoverTestFiles().sort();
+    res.json({ tests: files.map((file) => ({ file, name: file.replace(/^tests\//, '').replace(/\.spec\.ts$/, '') })) });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+app.post('/api/tests/run', express.json(), (req, res) => {
+  const requested = req.body && req.body.file;
+  const allowed = new Set(discoverTestFiles());
+  if (typeof requested !== 'string' || !allowed.has(requested)) {
+    res.status(400).json({ error: 'Unknown test file' });
+    return;
+  }
+
+  req.setTimeout(120000);
+  const TEST_PORT = 3999; // isolated scratch port, never the live dev server -- #518's "never silently reuse a different server" lesson
+  execFile(
+    'npx',
+    ['playwright', 'test', requested],
+    // shell: true -- on Windows, `npx` is npx.cmd; execFile without a shell
+    // uses CreateProcess directly, which doesn't resolve PATHEXT, and fails
+    // ENOENT even though `npx ...` works fine typed in any real terminal.
+    // Still safe: `requested` was already checked against a freshly-scanned
+    // allowlist of real files above, args stay a real array either way.
+    { cwd: rootDir, timeout: 110000, shell: true, env: { ...process.env, WB_TEST_PORT: String(TEST_PORT) } },
+    (error, stdout, stderr) => {
+      res.json({
+        success: true,
+        passed: !error,
+        exitCode: error ? error.code ?? 1 : 0,
+        output: stdout,
+        details: stderr,
+      });
+    }
+  );
 });
 
 // API Endpoint to rename a page

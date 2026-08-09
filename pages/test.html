@@ -1,0 +1,124 @@
+<div class="page__hero">
+  <h1>🧪 Test</h1>
+  <p>Click any test to run it. Results appear inline below the name.</p>
+</div>
+
+<div class="test-toolbar">
+  <input type="search" id="test-search" class="test-search" placeholder="Filter tests by name…">
+  <span id="test-summary" class="test-status"></span>
+</div>
+
+<p id="test-status" class="test-status">Loading tests…</p>
+<ul id="test-list" class="test-list"></ul>
+
+<style>
+  .test-toolbar { display: flex; align-items: center; gap: 1rem; margin: 1rem 0; }
+  .test-search { background: var(--bg-secondary); color: var(--text-primary); border: 1px solid var(--border-color); border-radius: 6px; padding: 0.4rem 0.75rem; flex: 1; }
+  .test-status { color: var(--text-secondary); }
+  .test-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.5rem; }
+  .test-row { border: 1px solid var(--border-color); border-radius: 8px; background: var(--bg-secondary); overflow: hidden; }
+  .test-row__name { display: flex; align-items: center; gap: 0.75rem; padding: 0.75rem 1rem; cursor: pointer; background: none; border: none; width: 100%; text-align: left; color: var(--text-primary); font-family: inherit; font-size: 0.9rem; }
+  .test-row__name:hover { color: var(--primary); }
+  .test-row__icon { width: 1.1rem; text-align: center; flex-shrink: 0; }
+  .test-row__file { color: var(--text-secondary); font-size: 0.75rem; font-family: monospace; margin-left: auto; }
+  .test-row__result { display: none; padding: 0 1rem 1rem; border-top: 1px solid var(--border-color); font-size: 0.8rem; }
+  .test-row__result.is-visible { display: block; padding-top: 0.75rem; }
+  .test-row__result pre { white-space: pre-wrap; word-break: break-word; max-height: 300px; overflow-y: auto; background: var(--bg-tertiary); padding: 0.75rem; border-radius: 6px; margin: 0.5rem 0 0; }
+  .test-row__result.passed { color: #22c55e; }
+  .test-row__result.failed { color: #ef4444; }
+  @keyframes test-spin { to { transform: rotate(360deg); } }
+  .test-row__icon--spinning { display: inline-block; animation: test-spin 0.8s linear infinite; }
+</style>
+
+<script>
+(function () {
+  const listEl = document.getElementById('test-list');
+  const statusEl = document.getElementById('test-status');
+  const summaryEl = document.getElementById('test-summary');
+  const searchEl = document.getElementById('test-search');
+  let allTests = [];
+
+  function escapeHtml(s) {
+    return String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  }
+
+  function render() {
+    const q = searchEl.value.trim().toLowerCase();
+    const tests = !q ? allTests : allTests.filter((t) => t.name.toLowerCase().includes(q));
+    summaryEl.textContent = `${tests.length} of ${allTests.length} tests`;
+
+    if (!tests.length) {
+      listEl.innerHTML = '';
+      statusEl.textContent = 'No tests match this filter.';
+      statusEl.style.display = '';
+      return;
+    }
+    statusEl.style.display = 'none';
+
+    listEl.innerHTML = tests.map((t, i) => `
+      <li class="test-row" data-index="${i}">
+        <button type="button" class="test-row__name">
+          <span class="test-row__icon">▶️</span>
+          <span>${escapeHtml(t.name)}</span>
+          <span class="test-row__file">${escapeHtml(t.file)}</span>
+        </button>
+        <div class="test-row__result"></div>
+      </li>
+    `).join('');
+
+    listEl.querySelectorAll('.test-row').forEach((row, i) => {
+      const test = tests[i];
+      const btn = row.querySelector('.test-row__name');
+      const icon = row.querySelector('.test-row__icon');
+      const resultEl = row.querySelector('.test-row__result');
+      btn.addEventListener('click', async () => {
+        if (icon.classList.contains('test-row__icon--spinning')) return; // already running
+        icon.textContent = '⏳';
+        icon.classList.add('test-row__icon--spinning');
+        resultEl.className = 'test-row__result is-visible';
+        resultEl.innerHTML = 'Running…';
+        try {
+          const res = await fetch('/api/tests/run', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ file: test.file }),
+          });
+          const data = await res.json();
+          icon.textContent = data.passed ? '✅' : '❌';
+          icon.classList.remove('test-row__icon--spinning');
+          resultEl.className = `test-row__result is-visible ${data.passed ? 'passed' : 'failed'}`;
+          resultEl.innerHTML = `
+            <strong>${data.passed ? 'Passed' : 'Failed'}</strong> (exit code ${data.exitCode})
+            <pre>${escapeHtml((data.output || '') + (data.details ? '\n' + data.details : ''))}</pre>
+          `;
+        } catch (err) {
+          icon.textContent = '⚠️';
+          icon.classList.remove('test-row__icon--spinning');
+          resultEl.className = 'test-row__result is-visible failed';
+          resultEl.textContent = 'Could not run test: ' + err.message;
+        }
+      });
+    });
+  }
+
+  searchEl.addEventListener('input', render);
+
+  async function loadTests() {
+    try {
+      const res = await fetch('/api/tests/list');
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const data = await res.json();
+      allTests = data.tests;
+      if (!allTests.length) {
+        statusEl.textContent = 'No tests found under tests/.';
+        return;
+      }
+      render();
+    } catch (err) {
+      statusEl.textContent = 'Could not load tests: ' + err.message;
+    }
+  }
+
+  loadTests();
+})();
+</script>
