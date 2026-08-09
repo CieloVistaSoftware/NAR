@@ -1,61 +1,76 @@
 <div class="page__hero">
   <h1>🐛 Issues</h1>
-  <p>Live from <a href="https://github.com/CieloVistaSoftware/test/issues" target="_blank" rel="noopener">GitHub</a> — open and closed, including the full issue body.</p>
+  <p>Open issues from <a href="https://github.com/CieloVistaSoftware/test/issues" target="_blank" rel="noopener">GitHub</a>.</p>
 </div>
 
 <div class="issues-toolbar">
-  <div class="issues-tabs" role="tablist" aria-label="Filter issues by state">
-    <button type="button" class="issues-tab issues-tab--active" data-state="open" x-ripple>Open</button>
-    <button type="button" class="issues-tab" data-state="closed" x-ripple>Closed</button>
-    <button type="button" class="issues-tab" data-state="all" x-ripple>All</button>
-    <button type="button" class="issues-tab" data-state="in-progress" x-ripple>In Progress</button>
-  </div>
-  <span id="issues-summary" class="issues-summary"></span>
-  <span id="issues-active" class="issues-summary" aria-live="polite">Current Active: 0</span>
   <input type="search" id="issues-search" class="issues-search" placeholder="Filter by title or number…">
+  <span id="issues-summary" class="issues-summary"></span>
+  <button type="button" id="new-issue-btn" class="new-issue-btn" x-ripple>+ New Issue</button>
+</div>
+
+<div id="new-issue-form" class="new-issue-form" hidden>
+  <label class="new-issue-field">
+    <span>Title</span>
+    <input type="text" id="new-issue-title" placeholder="Short summary of the issue">
+  </label>
+  <label class="new-issue-field">
+    <span>Description</span>
+    <textarea id="new-issue-body" rows="5" placeholder="What's wrong, and what did you expect instead?"></textarea>
+  </label>
+  <div class="new-issue-actions">
+    <button type="button" id="new-issue-cancel" class="new-issue-btn new-issue-btn--secondary">Cancel</button>
+    <button type="button" id="new-issue-submit" class="new-issue-btn">Continue on GitHub →</button>
+  </div>
+  <p class="new-issue-note">
+    Opens a pre-filled issue on GitHub to submit — this site never holds a GitHub token, so
+    creating an issue always happens under your own GitHub account, not this site's.
+  </p>
 </div>
 
 <p id="issues-status" class="issues-status">Loading issues…</p>
-<ul id="issues-list" class="issues-list"></ul>
+<div id="issues-grid" class="issues-grid"></div>
 
 <style>
-  .issues-toolbar { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; justify-content: space-between; margin: 1.5rem 0 1rem; }
-  .issues-tabs { display: flex; gap: 0.5rem; }
-  .issues-tab { background: var(--bg-secondary); color: var(--text-secondary); border: 1px solid var(--border-color); border-radius: 6px; padding: 0.4rem 0.9rem; cursor: pointer; font-size: 0.875rem; }
-  .issues-tab--active { background: var(--primary); color: #fff; border-color: var(--primary); }
-  .issues-search { background: var(--bg-secondary); color: var(--text-primary); border: 1px solid var(--border-color); border-radius: 6px; padding: 0.4rem 0.75rem; min-width: 240px; }
-  .issues-summary { color: var(--text-secondary); font-size: 0.8rem; }
+  .issues-toolbar { display: flex; align-items: center; gap: 1rem; margin: 1.5rem 0 1rem; flex-wrap: wrap; }
+  .issues-search { background: var(--bg-secondary); color: var(--text-primary); border: 1px solid var(--border-color); border-radius: 6px; padding: 0.4rem 0.75rem; min-width: 240px; flex: 1; }
+  .issues-summary { color: var(--text-secondary); font-size: 0.85rem; white-space: nowrap; }
   .issues-status { color: var(--text-secondary); }
-  .issues-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.5rem; }
-  .issue-row { border: 1px solid var(--border-color); border-radius: 8px; background: var(--bg-secondary); overflow: hidden; }
-  .issue-row__summary { display: flex; align-items: center; gap: 0.75rem; padding: 0.75rem 1rem; cursor: pointer; }
-  .issue-row__state { font-size: 0.75rem; font-weight: 700; padding: 0.15em 0.6em; border-radius: 999px; white-space: nowrap; }
-  .issue-row__state--open { background: color-mix(in srgb, #22c55e 25%, transparent); color: #22c55e; }
-  .issue-row__state--in-progress { background: color-mix(in srgb, #f0b429 25%, transparent); color: #f0b429; }
-  .issue-row__state--closed { background: color-mix(in srgb, #a855f7 25%, transparent); color: #a855f7; }
-  .issue-row__number { color: var(--text-secondary); font-family: monospace; }
-  .issue-row__title { flex: 1; font-weight: 600; }
-  .issue-row__labels { display: flex; gap: 0.35rem; flex-wrap: wrap; }
-  .issue-row__label { font-size: 0.7rem; padding: 0.1em 0.5em; border-radius: 999px; background: var(--bg-tertiary); color: var(--text-secondary); }
-  .issue-row__body { display: none; padding: 0 1rem 1rem; border-top: 1px solid var(--border-color); color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6; }
-  /* Rendered markdown (wb-mdhtml) needs normal HTML flow, not the raw-text
-     pre-wrap this div used before -- headings/lists/code blocks would
-     otherwise inherit literal whitespace preservation meant for plain text. */
-  .issue-row__body .issue-row__mdhtml { display: block; }
-  .issue-row--expanded .issue-row__body { display: block; padding-top: 1rem; }
+  .new-issue-btn { background: var(--primary); color: #fff; border: none; border-radius: 6px; padding: 0.5rem 1rem; font-size: 0.875rem; font-weight: 600; cursor: pointer; white-space: nowrap; }
+  .new-issue-btn--secondary { background: var(--bg-tertiary); color: var(--text-primary); }
+  .new-issue-form { border: 1px solid var(--border-color); border-radius: 8px; background: var(--bg-secondary); padding: 1.25rem; margin-bottom: 1.5rem; display: flex; flex-direction: column; gap: 0.9rem; }
+  .new-issue-field { display: flex; flex-direction: column; gap: 0.35rem; font-size: 0.85rem; color: var(--text-secondary); }
+  .new-issue-field input, .new-issue-field textarea { background: var(--bg-tertiary); color: var(--text-primary); border: 1px solid var(--border-color); border-radius: 6px; padding: 0.5rem 0.75rem; font-family: inherit; font-size: 0.95rem; resize: vertical; }
+  .new-issue-actions { display: flex; gap: 0.75rem; justify-content: flex-end; }
+  .new-issue-note { margin: 0; font-size: 0.75rem; color: var(--text-secondary); }
+
+  .issues-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1rem; }
+  .issue-card { border: 1px solid var(--border-color); border-radius: 8px; background: var(--bg-secondary); padding: 1.1rem 1.25rem; display: flex; flex-direction: column; gap: 0.6rem; }
+  .issue-card__header { display: flex; align-items: baseline; gap: 0.5rem; }
+  .issue-card__number { color: var(--text-secondary); font-family: monospace; font-size: 0.8rem; }
+  .issue-card__title { margin: 0; font-size: 1rem; }
+  .issue-card__title a { color: var(--text-primary); text-decoration: none; }
+  .issue-card__title a:hover { color: var(--primary); text-decoration: underline; }
+  .issue-card__desc { margin: 0; color: var(--text-secondary); font-size: 0.85rem; line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
+  .issue-card__labels { display: flex; gap: 0.35rem; flex-wrap: wrap; }
+  .issue-card__label { font-size: 0.7rem; padding: 0.1em 0.5em; border-radius: 999px; background: var(--bg-tertiary); color: var(--text-secondary); }
+  .issue-card__meta { display: flex; align-items: center; gap: 0.5rem; margin-top: auto; padding-top: 0.6rem; border-top: 1px solid var(--border-color); font-size: 0.75rem; color: var(--text-secondary); }
+  .issue-card__avatar { width: 20px; height: 20px; border-radius: 50%; }
+  .issue-card__dates { display: flex; flex-direction: column; gap: 0.1rem; margin-left: auto; text-align: right; }
 </style>
 
 <script>
 (function () {
   const REPO = 'CieloVistaSoftware/test';
-  const listEl = document.getElementById('issues-list');
+  const gridEl = document.getElementById('issues-grid');
   const statusEl = document.getElementById('issues-status');
   const summaryEl = document.getElementById('issues-summary');
-  const activeEl = document.getElementById('issues-active');
   const searchEl = document.getElementById('issues-search');
-  const tabs = Array.from(document.querySelectorAll('.issues-tab'));
+  const newIssueBtn = document.getElementById('new-issue-btn');
+  const newIssueForm = document.getElementById('new-issue-form');
+  const newIssueTitle = document.getElementById('new-issue-title');
+  const newIssueBody = document.getElementById('new-issue-body');
   let allIssues = [];
-  let currentState = 'open';
 
   function escapeHtml(s) {
     return String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
@@ -63,159 +78,79 @@
 
   const fmtDate = (iso) => new Date(iso).toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' });
 
-  // John: "When these buttons are clicked add a count of those issues and
-  // the date ranges here." Uses createdAt for open issues (when they were
-  // opened) and closedAt for closed ones (when they were resolved) -- for
-  // "all", spans the full createdAt range since that's the one date every
-  // issue has.
-  function updateSummary(filtered) {
-    if (!filtered.length) {
-      summaryEl.textContent = '';
-      return;
-    }
-    const dateField = currentState === 'closed' ? 'closed_at' : 'created_at';
-    const dates = filtered.map((i) => new Date(i[dateField] || i.created_at).getTime()).sort((a, b) => a - b);
-    const oldest = fmtDate(dates[0]);
-    const newest = fmtDate(dates[dates.length - 1]);
-    const range = oldest === newest ? oldest : `${oldest} – ${newest}`;
-    const noun = filtered.length === 1 ? 'issue' : 'issues';
-    summaryEl.textContent = `${filtered.length} ${noun} · ${range}`;
-  }
-
-  // An issue counts as "being worked on" when it carries the explicit
-  // status:in-progress label OR priority:1 (John's convention for flagging
-  // active work) -- same detection the VS Code Issue Viewer uses
-  // (src/shared/github-issues-view.ts), so both surfaces agree.
-  function isInProgress(issue) {
-    return (issue.labels || []).some((label) => {
-      const name = String(label.name || '').trim().toLowerCase();
-      return name === 'status:in-progress' || name === 'priority:1';
-    });
-  }
-
-  function updateActiveCount() {
-    const activeCount = allIssues.filter((issue) => issue.state === 'open' && isInProgress(issue)).length;
-    activeEl.textContent = `Current Active: ${activeCount}`;
-  }
-
   function render() {
     const q = searchEl.value.trim().toLowerCase();
-    const filtered = allIssues.filter((issue) => {
-      // "in-progress" isn't a real GitHub issue.state (only open/closed exist
-      // there) -- it's the same derived state as updateActiveCount()'s
-      // "Current Active" number, so this tab and that count always agree.
-      if (currentState === 'in-progress') {
-        if (!(issue.state === 'open' && isInProgress(issue))) return false;
-      } else if (currentState !== 'all' && issue.state !== currentState) {
-        return false;
-      }
-      if (!q) return true;
-      return issue.title.toLowerCase().includes(q) || String(issue.number).includes(q);
-    });
+    const filtered = !q
+      ? allIssues
+      : allIssues.filter((i) => i.title.toLowerCase().includes(q) || String(i.number).includes(q));
 
-    updateSummary(filtered);
-    updateActiveCount();
+    summaryEl.textContent = `${filtered.length} open ${filtered.length === 1 ? 'issue' : 'issues'}`;
 
     if (!filtered.length) {
-      listEl.innerHTML = '';
-      statusEl.textContent = allIssues.length ? 'No issues match this filter.' : 'No issues found.';
+      gridEl.innerHTML = '';
+      statusEl.textContent = allIssues.length ? 'No issues match this filter.' : 'No open issues.';
       statusEl.style.display = '';
       return;
     }
     statusEl.style.display = 'none';
 
-    listEl.innerHTML = filtered.map((issue) => {
+    gridEl.innerHTML = filtered.map((issue) => {
       const labels = (issue.labels || []).map((l) =>
-        `<span class="issue-row__label" style="background:#${l.color || '333'}22;color:#${l.color || '999'}">${escapeHtml(l.name)}</span>`
+        `<span class="issue-card__label" style="background:#${l.color || '333'}22;color:#${l.color || '999'}">${escapeHtml(l.name)}</span>`
       ).join('');
-      const rowState = issue.state === 'open' && isInProgress(issue) ? 'in-progress' : issue.state;
-      const rowStateText = rowState === 'in-progress' ? 'in-progress' : issue.state;
+      const author = issue.user || {};
       return `
-        <li class="issue-row" data-number="${issue.number}">
-          <div class="issue-row__summary">
-            <span class="issue-row__state issue-row__state--${rowState}">${rowStateText}</span>
-            <span class="issue-row__number">#${issue.number}</span>
-            <span class="issue-row__title">${escapeHtml(issue.title)}</span>
-            <span class="issue-row__labels">${labels}</span>
+        <article class="issue-card">
+          <div class="issue-card__header">
+            <span class="issue-card__number">#${issue.number}</span>
+            <h3 class="issue-card__title"><a href="${issue.html_url}" target="_blank" rel="noopener">${escapeHtml(issue.title)}</a></h3>
           </div>
-          <div class="issue-row__body"><div class="issue-row__mdhtml"></div></div>
-        </li>`;
+          <p class="issue-card__desc">${escapeHtml(issue.body || 'No description provided.')}</p>
+          ${labels ? `<div class="issue-card__labels">${labels}</div>` : ''}
+          <div class="issue-card__meta">
+            ${author.avatar_url ? `<img class="issue-card__avatar" src="${author.avatar_url}" alt="">` : ''}
+            <span>${escapeHtml(author.login || 'unknown')}</span>
+            <div class="issue-card__dates">
+              <span>Created ${fmtDate(issue.created_at)}</span>
+              <span>Updated ${fmtDate(issue.updated_at)}</span>
+            </div>
+          </div>
+        </article>`;
     }).join('');
-
-    // A plain div, not a real <wb-mdhtml> tag -- tag-map.js registers
-    // wb-mdhtml for WB's own generic auto-scan/lazy-load, which would call
-    // mdhtml() on it with DEFAULT options (autoLiveRender left at its true
-    // default) the moment it lands in the DOM, racing ahead of the explicit
-    // { autoLiveRender: false } call below and re-introducing the exact bug
-    // that option exists to prevent (confirmed live: it did, even before any
-    // row was ever clicked open). mdhtml() itself supports this -- it only
-    // needs the wb-mdhtml TAG for CSS tag-selectors, and adds the .wb-mdhtml
-    // CLASS itself on any other host (same pattern public/doc-viewer.html's
-    // own plain <div id="content"> already relies on).
-    //
-    // Set via .textContent, not innerHTML, so the browser HTML-escapes the
-    // raw body text into it; mdhtml.js's own decode-then-parse step (its
-    // "code samples are frequently written HTML-escaped" handling) expects
-    // exactly that and un-escapes it before handing the real markdown to
-    // `marked`. Assigning raw markdown directly via innerHTML here would get
-    // double-escaped instead.
-    const rows = listEl.querySelectorAll('.issue-row');
-    rows.forEach((row, i) => {
-      const md = row.querySelector('.issue-row__mdhtml');
-      if (md) md.textContent = filtered[i].body || '_No description provided._';
-    });
-
-    listEl.querySelectorAll('.issue-row__summary').forEach((summary) => {
-      summary.addEventListener('click', async () => {
-        const row = summary.closest('.issue-row');
-        row.classList.toggle('issue-row--expanded');
-        // Lazy: only pay for markdown parsing once a row is actually opened,
-        // and only once per row (not on every re-toggle).
-        const md = row.querySelector('.issue-row__mdhtml');
-        if (md && !md.dataset.rendered && window.WB) {
-          md.dataset.rendered = '1';
-          // autoLiveRender: false -- issue bodies are arbitrary/untrusted
-          // author text, not curated docs. Without this, a body that merely
-          // ILLUSTRATES a <wb-*>/x-* example (like #527, describing this
-          // exact bug) gets that example auto-promoted into a real, live,
-          // fetching/executing element on this page.
-          await window.WB.inject(md, 'mdhtml', { autoLiveRender: false });
-        }
-      });
-    });
   }
 
-  tabs.forEach((tab) => {
-    tab.addEventListener('click', () => {
-      tabs.forEach((t) => t.classList.remove('issues-tab--active'));
-      tab.classList.add('issues-tab--active');
-      currentState = tab.dataset.state;
-      render();
-    });
-  });
   searchEl.addEventListener('input', render);
+
+  newIssueBtn.addEventListener('click', () => {
+    newIssueForm.hidden = !newIssueForm.hidden;
+    if (!newIssueForm.hidden) newIssueTitle.focus();
+  });
+  document.getElementById('new-issue-cancel').addEventListener('click', () => {
+    newIssueForm.hidden = true;
+    newIssueTitle.value = '';
+    newIssueBody.value = '';
+  });
+  document.getElementById('new-issue-submit').addEventListener('click', () => {
+    const title = newIssueTitle.value.trim();
+    const body = newIssueBody.value.trim();
+    if (!title) { newIssueTitle.focus(); return; }
+    const url = `https://github.com/${REPO}/issues/new?title=${encodeURIComponent(title)}&body=${encodeURIComponent(body)}`;
+    window.open(url, '_blank', 'noopener');
+  });
 
   async function load() {
     try {
-      // Public, unauthenticated GitHub REST API -- works identically on the
-      // deployed GitHub Pages site (static hosting, no server-side proxy
-      // possible) and in local dev. A single per_page=100 request silently
-      // truncated once the repo passed 100 issues (John: "why does issue
-      // viewer counts differ from ?page=issues" -- this page was missing
-      // every issue older than the 100 most recent). Page through until a
-      // response comes back short of per_page, the standard "last page"
-      // signal -- capped at 10 pages (1000 issues) as a runaway backstop.
       const perPage = 100;
       let page = 1;
       let all = [];
       while (page <= 10) {
         statusEl.textContent = `Loading issues… (${all.length} so far)`;
         statusEl.style.display = '';
-        const res = await fetch(`https://api.github.com/repos/${REPO}/issues?state=all&per_page=${perPage}&page=${page}&sort=created&direction=desc`);
+        const res = await fetch(`https://api.github.com/repos/${REPO}/issues?state=open&per_page=${perPage}&page=${page}&sort=created&direction=desc`);
         if (!res.ok) throw new Error(`GitHub API responded ${res.status}`);
         const batch = await res.json();
         all = all.concat(batch);
-        if (batch.length < perPage) break; // last page
+        if (batch.length < perPage) break;
         page++;
       }
       // The /issues endpoint also returns pull requests -- exclude them.
