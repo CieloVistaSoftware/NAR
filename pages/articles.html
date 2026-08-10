@@ -16,7 +16,8 @@
   .articles-summary { color: var(--text-secondary); font-size: 0.85rem; }
   .articles-status { color: var(--text-secondary); }
   .articles-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.75rem; }
-  .article-row { border: 1px solid var(--border-color); border-radius: 8px; background: var(--bg-secondary); padding: 1rem 1.25rem; }
+  .article-row { border: 1px solid var(--border-color); border-radius: 8px; background: var(--bg-secondary); padding: 1rem 1.25rem; cursor: pointer; }
+  .article-row:hover { border-color: var(--primary); }
   .article-row__title { margin: 0 0 0.35rem; font-size: 1.1rem; }
   .article-row__title a { color: var(--text-primary); text-decoration: none; }
   .article-row__title a:hover { color: var(--primary); text-decoration: underline; }
@@ -114,13 +115,25 @@
     statusEl.style.display = 'none';
 
     listEl.innerHTML = results.map((a) => `
-      <li class="article-row">
+      <li class="article-row" data-url="${escapeHtml(a.url)}">
         <h3 class="article-row__title"><a href="${escapeHtml(a.url)}">${escapeHtml(a.title)}</a></h3>
         <p class="article-row__excerpt">${escapeHtml(a.excerpt)}</p>
         <span class="article-row__date">${escapeHtml(a.date)}</span>
         ${a.snippet ? `<p class="article-row__match">${a.snippet}</p>` : ''}
       </li>
     `).join('');
+
+    // The title itself is already a single-click link -- this makes the
+    // WHOLE row double-clickable too, the convention readers expect from
+    // a list/grid of items (file browsers, mail clients, etc.). Uses the
+    // same in-app SPA navigation the header nav's own click handler uses
+    // (pushState + a synthetic click on a real link) rather than a raw
+    // location.href jump, so back/forward and scroll-memory keep working.
+    listEl.querySelectorAll('.article-row').forEach((row) => {
+      row.addEventListener('dblclick', () => {
+        row.querySelector('.article-row__title a')?.click();
+      });
+    });
   }
 
   render();
