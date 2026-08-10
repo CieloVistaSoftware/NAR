@@ -24,6 +24,24 @@
       "pageToLoad": "home"
     },
     {
+      "menuItemId": "introduction",
+      "menuItemText": "Introduction",
+      "menuItemEmoji": "👋",
+      "pageToLoad": "introduction"
+    },
+    {
+      "menuItemId": "nar",
+      "menuItemText": "The NAR",
+      "menuItemEmoji": "📜",
+      "pageToLoad": "nar"
+    },
+    {
+      "menuItemId": "articles",
+      "menuItemText": "Articles",
+      "menuItemEmoji": "🔍",
+      "pageToLoad": "articles"
+    },
+    {
       "menuItemId": "about",
       "menuItemText": "About",
       "menuItemEmoji": "ℹ️",
