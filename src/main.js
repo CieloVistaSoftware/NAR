@@ -56,6 +56,21 @@ async function init() {
     // Expose for debugging
     _window.WBSite = site;
 
+    // Error Log nav item only matters once there's actually something to
+    // look at -- hide it rather than sending readers to a permanently-empty
+    // page. A 404 (never-logged-yet) counts the same as a 200 with an empty
+    // array; either way there's nothing to show.
+    fetch('data/errors.json')
+      .then((res) => (res.ok ? res.json() : { errors: [] }))
+      .then((data) => {
+        const count = Array.isArray(data.errors) ? data.errors.length : 0;
+        if (count === 0) {
+          const link = document.querySelector('a.nav__item[href="errors-viewer.html"]');
+          if (link) link.style.display = 'none';
+        }
+      })
+      .catch(() => {}); // never let this block the rest of init
+
     console.log('✅ wb-starter ready');
   } catch (error) {
     console.error('❌ Site initialization failed:', error);

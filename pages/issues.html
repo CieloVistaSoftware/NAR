@@ -49,6 +49,7 @@
     <p class="issue-modal__desc-label">Description</p>
     <div id="modal-desc" class="issue-modal__desc"></div>
     <a id="modal-github-link" href="#" target="_blank" rel="noopener" class="new-issue-btn new-issue-btn--secondary">View on GitHub →</a>
+    <p id="modal-received-note" class="issue-modal__received" hidden>✓ Received — no response yet.</p>
   </div>
 </div>
 
@@ -89,6 +90,7 @@
   .issue-modal__meta { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem; font-size: 0.85rem; color: var(--text-secondary); }
   .issue-modal__desc-label { margin: 0; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--text-secondary); }
   .issue-modal__desc { white-space: pre-wrap; line-height: 1.6; color: var(--text-primary); }
+  .issue-modal__received { margin: 0; padding: 0.5rem 1rem; background: var(--bg-tertiary); border-radius: 6px; color: var(--text-secondary); font-size: 0.875rem; }
 </style>
 
 <script>
@@ -172,7 +174,14 @@
     document.getElementById('modal-created').textContent = fmtDate(issue.created_at);
     document.getElementById('modal-updated').textContent = fmtDate(issue.updated_at);
     document.getElementById('modal-desc').textContent = issue.body || 'No description provided.';
+    // No comments yet means nobody has actually answered this on GitHub --
+    // sending a reader there anyway just shows them the same body text
+    // they're already looking at. Only link out once there's something
+    // more to read than what's already in this modal.
+    const hasResponse = (issue.comments || 0) > 0;
     document.getElementById('modal-github-link').href = issue.html_url;
+    document.getElementById('modal-github-link').hidden = !hasResponse;
+    document.getElementById('modal-received-note').hidden = hasResponse;
     document.getElementById('modal-labels').innerHTML = (issue.labels || []).map((l) =>
       `<span class="issue-card__label" style="background:#${l.color || '333'}22;color:#${l.color || '999'}">${escapeHtml(l.name)}</span>`
     ).join('');
