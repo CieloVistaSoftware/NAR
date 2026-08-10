@@ -27,7 +27,9 @@ In NAR usage, a recognized leader who holds governing authority over a network o
 churches and ministries, analogous to (and sometimes explicitly modeled on) the New
 Testament apostles. This site's central objection is that the New Testament ties the
 apostolic office to a specific, closed qualification — personally witnessing the
-resurrected Christ (Acts 1:21–22, 1 Corinthians 9:1, 1 Corinthians 15:8) — that this
+resurrected Christ ([Acts 1:21–22](https://www.blueletterbible.org/kjv/act/1/21-22/),
+[1 Corinthians 9:1](https://www.blueletterbible.org/kjv/1co/9/1/),
+[1 Corinthians 15:8](https://www.blueletterbible.org/kjv/1co/15/8/)) — that this
 usage doesn't meet.
 
 ## Prophet / Prophecy (NAR usage)
