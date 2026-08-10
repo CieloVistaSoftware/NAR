@@ -54,6 +54,12 @@
       "pageToLoad": "docs"
     },
     {
+      "menuItemId": "whats-new",
+      "menuItemText": "What's New",
+      "menuItemEmoji": "🆕",
+      "pageToLoad": "whats-new"
+    },
+    {
       "menuItemId": "issues",
       "menuItemText": "Issues",
       "menuItemEmoji": "🐛",
