@@ -1,0 +1,28 @@
+{
+  "lastRun": "2026-08-10T01:52:32.693Z",
+  "totalChecks": 56,
+  "bugs": [
+    {
+      "id": "bug-regression-tests",
+      "checkId": "chk-regression-tests",
+      "title": "Regression tests failing",
+      "detail": "✗ REG-001a: Every package imported in src/ is listed in dependencies\n✗ REG-001c: No require() of external packages in extension host\n✗ REG-003: TypeScript compiles with zero errors\n✗ REG-004: Every catalog command ID is wired through a registerCommand() call\n✗ REG-005: No duplicate command IDs in catalog.ts\n✗ REG-006: package.json contributes.commands covers all catalog IDs\n✗ REG-007: extension.ts activates all feature modules\n✗ REG-008: No bare console.log in extension host (warning)",
+      "evidence": [
+        "✗ REG-001a: Every package imported in src/ is listed in dependencies",
+        "✗ REG-001c: No require() of external packages in extension host",
+        "✗ REG-003: TypeScript compiles with zero errors",
+        "✗ REG-004: Every catalog command ID is wired through a registerCommand() call",
+        "✗ REG-005: No duplicate command IDs in catalog.ts",
+        "✗ REG-006: package.json contributes.commands covers all catalog IDs",
+        "✗ REG-007: extension.ts activates all feature modules",
+        "✗ REG-008: No bare console.log in extension host (warning)"
+      ],
+      "priority": "high",
+      "category": "Quality",
+      "recommendation": "Run node scripts/run-regression-tests.js and fix the failing tests.",
+      "detectedAt": "2026-08-10T01:27:01.013Z",
+      "fixed": false
+    }
+  ],
+  "checkIndex": 0
+}

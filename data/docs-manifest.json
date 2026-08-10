@@ -1,0 +1,61 @@
+{
+  "generated": "2026-08-10T01:52:19.321Z",
+  "totalFiles": 4,
+  "categories": [
+    "root"
+  ],
+  "byCategory": {
+    "root": [
+      {
+        "path": "docs/glossary.md",
+        "title": "Glossary",
+        "name": "glossary",
+        "category": "root"
+      },
+      {
+        "path": "docs/people.md",
+        "title": "People & Organizations",
+        "name": "people",
+        "category": "root"
+      },
+      {
+        "path": "docs/sources.md",
+        "title": "Sources",
+        "name": "sources",
+        "category": "root"
+      },
+      {
+        "path": "docs/timeline.md",
+        "title": "Timeline",
+        "name": "timeline",
+        "category": "root"
+      }
+    ]
+  },
+  "files": [
+    {
+      "path": "docs/glossary.md",
+      "title": "Glossary",
+      "name": "glossary",
+      "category": "root"
+    },
+    {
+      "path": "docs/people.md",
+      "title": "People & Organizations",
+      "name": "people",
+      "category": "root"
+    },
+    {
+      "path": "docs/sources.md",
+      "title": "Sources",
+      "name": "sources",
+      "category": "root"
+    },
+    {
+      "path": "docs/timeline.md",
+      "title": "Timeline",
+      "name": "timeline",
+      "category": "root"
+    }
+  ]
+}
