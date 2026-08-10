@@ -78,6 +78,38 @@ the underlying references.
   report it — a 2017 jury found Jan Crouch and TBN's parent corporation liable
   and awarded $2 million in damages. Paul and Jan's son Matt Crouch is TBN's
   current president and chairman.
+- **1983–present** — Benny Hinn (b. 1952, Jaffa, Israel) becomes the most
+  visible living faith healer in the Kuhlman tradition. He attended a Kuhlman
+  service in Pittsburgh in 1973 and later wrote a book crediting her as his
+  formative influence; founded Orlando Christian Center in 1983 and launched
+  *This Is Your Day* on TBN in 1990, building his ministry around mass
+  "Miracle Crusades" where attendees are "slain in the Spirit" — falling
+  backward, often caught by staff positioned for exactly that. He has made a
+  string of specific claims that drew wide ridicule and correction: on TBN in
+  1990 he taught the Trinity was actually nine persons, each with his own
+  "spirit, soul, and body," calling it "a very dumb statement" and retracting
+  it within the week once challenged; in December 1991 he taught that before
+  the Fall, Adam could fly, "even to the moon"; in 1999 he claimed a vision
+  that TV viewers who placed a deceased loved one's hand on their television
+  screen during his broadcast would see them resurrected. Multiple
+  investigations followed up on his healing claims and found the same pattern
+  documented elsewhere in this timeline: HBO's *A Question of Miracles*
+  (2001) tracked seven claimed healings for a year and found none held up;
+  the CBC's *the fifth estate* (2004), using hidden cameras, filmed staff
+  actively steering the most visibly disabled attendees away from the stage
+  and found previously "healed" individuals still sick or dead. Financially,
+  Benny Hinn Ministries was raided by IRS criminal investigators and U.S.
+  Postal Inspectors in April 2017 over suspected tax evasion (no charges are
+  documented as having followed), and the ministry has faced repeated
+  creditor judgments and wage garnishments into 2026; MinistryWatch gives it
+  a financial transparency grade of F. In September 2019 Hinn publicly
+  renounced prosperity-gospel "seed" fundraising on air — "giving has become
+  such a gimmick... it's making me sick to my stomach" — but was recorded
+  soliciting seed donations again within weeks, echoing an identical
+  reversal after his 1990 Trinity retraction. His own nephew, Costi Hinn,
+  left the family ministry and published *God, Greed, and the (Prosperity)
+  Gospel* (2019), calling prosperity teaching "the most hateful and abusive
+  kind of false teaching plaguing the church today."
 - **1997–present** — Marcus and Joni Lamb launch Daystar Television Network
   out of Bedford, Texas, funded in part by Kenneth Copeland Ministries and
   built around the same prosperity/Word of Faith programming roster as TBN

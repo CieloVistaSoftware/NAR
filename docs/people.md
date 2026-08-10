@@ -55,6 +55,14 @@ site of his own.
 ceased operations in 2016; documented via
 [Wikipedia](https://en.wikipedia.org/wiki/Kathryn_Kuhlman).
 
+**Benny Hinn** (b. 1952) — Benny Hinn Ministries:
+[bennyhinn.org](https://www.bennyhinn.org/). Documented via
+[Wikipedia](https://en.wikipedia.org/wiki/Benny_Hinn).
+
+**Costi Hinn** — Benny Hinn's nephew and public critic; author of *God, Greed,
+and the (Prosperity) Gospel* (2019). Current ministry:
+[forthegospel.org](https://www.forthegospel.org/).
+
 **Pat Robertson** (1930–2023) — founder of CBN, now led by his son:
 [cbn.com](https://cbn.com/). *The 700 Club*'s own show history:
 [cbn.com/700club](https://secure.cbn.com/700club/ShowInfo/About/about700club.asp).

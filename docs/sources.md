@@ -48,6 +48,19 @@ his 1974 book *Healing: A Doctor in Search of a Miracle*.
 [AlterNet on the 2012 Romney prediction](https://www.alternet.org/2012/11/pat-robertson-admits-he-blew-election-prediction-he-got-god),
 and [ABC News on the Haiti remarks](https://abcnews.go.com/GMA/HaitiEarthquake/white-house-advisor-valerie-jarrett-speechless-pat-robertson/story?id=9555714).
 
+**Benny Hinn** — [Wikipedia](https://en.wikipedia.org/wiki/Benny_Hinn); the 1990
+Trinity retraction via
+[Christianity Today, Oct 1991](https://www.christianitytoday.com/1991/10/benny-hinn-best-selling-author-admits-mistakes-vows-changes/);
+the 2019 prosperity-gospel renunciation and its reversal via
+[Christianity Today, Sept 2019](https://www.christianitytoday.com/2019/09/benny-hinn-renounces-prosperity-gospel/)
+and [Pulpit & Pen](https://pulpitandpen.org/2019/09/14/weeks-after-repenting-benny-hinn-just-preached-prosperity-seed-faith-giving-again-heres-the-video/);
+the 2017 IRS raid via
+[CBS News](https://www.cbsnews.com/amp/texas/news/irs-postal-inspectors-raid-benny-hinn-ministries);
+ongoing financial-transparency findings via
+[MinistryWatch](https://ministrywatch.com/bank-ordered-to-garnish-benny-hinn-ministries-account/);
+his nephew Costi Hinn's account via *God, Greed, and the (Prosperity) Gospel*
+(Zondervan, 2019).
+
 **Trinity Broadcasting Network** — [Wikipedia](https://en.wikipedia.org/wiki/Trinity_Broadcasting_Network);
 the Koper lawsuit via
 [Christian Post](https://www.christianpost.com/news/tbn-execs-threatened-founders-granddaughter-with-gun-fired-her-for-refusing-to-skim-100m-of-charitable-assets-lawsuit-claims.html);
