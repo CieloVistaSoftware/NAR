@@ -28,19 +28,55 @@ Current site, which discusses TheCall's history directly: [louengle.com](https:/
 ## Shepherding (Discipleship) movement figures
 
 **Derek Prince** (1915–2003) — official ministry site, still active:
-[derekprince.com](https://www.derekprince.com/).
+[derekprince.com](https://www.derekprince.com/). Full biography: [Derek Prince](?page=derek-prince).
 
 **Bob Mumford** — [lifechangers.org](https://lifechangers.org/about-us/), his ministry
 since 1973.
 
-**Charles Simpson** — ministry continues as Charles Simpson Ministries / CSM
-Publishing, now led by his son: [csmpublishing.org](https://csmpublishing.org/).
+**Charles Simpson** (1937–2024) — founder and chairman of the Fellowship of Covenant
+Ministries and Churches; ministry continues as Charles Simpson Ministries / CSM
+Publishing, now led by his son, Rev. Stephen Simpson:
+[csmpublishing.org](https://csmpublishing.org/). Memorial letter:
+[csmpublishing.org/march-2024-remembering-charles-simpson](https://csmpublishing.org/march-2024-remembering-charles-simpson/).
+Full biography: [Don Basham & Charles Simpson](?page=don-basham-charles-simpson).
 
-**Don Basham** (d. 1989) and **Ern Baxter** (d. 1993) — no official or successor sites
-found for either. Both are documented in secondary sources on the Shepherding
-movement rather than through any surviving site of their own.
+**Don Basham** (1926–1989) — no personal or successor site of his own; documented
+via a biography page on Charles Simpson Ministries' site:
+[csmpublishing.org/about/leadership/don-basham](https://csmpublishing.org/about/leadership/don-basham/).
+Full biography: [Don Basham & Charles Simpson](?page=don-basham-charles-simpson).
+
+**Ern Baxter** (1914–1993) — no official or successor site found. Documented in
+secondary sources on the Shepherding movement rather than through any surviving
+site of his own.
+
+## Televangelism precedents
+
+**Kathryn Kuhlman** (1907–1976) — no personal site survives her. Her foundation
+ceased operations in 2016; documented via
+[Wikipedia](https://en.wikipedia.org/wiki/Kathryn_Kuhlman).
+
+**Pat Robertson** (1930–2023) — founder of CBN, now led by his son:
+[cbn.com](https://cbn.com/). *The 700 Club*'s own show history:
+[cbn.com/700club](https://secure.cbn.com/700club/ShowInfo/About/about700club.asp).
+
+**Matt Crouch** — current president and chairman of Trinity Broadcasting Network,
+son of founders Paul and Jan Crouch: [tbn.org](https://www.tbn.org/).
+
+**Daystar Television Network** — [daystar.com](https://daystar.com/). Leadership is
+unsettled following co-founder Joni Lamb's May 2026 death; no single confirmed
+successor was found as of this writing.
+
+**Perry Stone** — Voice of Evangelism / *Manna-Fest*:
+[perrystone.org](https://perrystone.org/).
 
 ## Critics and researchers
+
+**James Randi** (1928–2020) — magician and investigator; author of *The Faith
+Healers* (1987), the most substantial independent investigation of televangelist
+healing claims, and founder of the James Randi Educational Foundation. The
+foundation's own randi.org domain did not resolve at the time this page was
+checked; biography and bibliography via
+[Wikipedia](https://en.wikipedia.org/wiki/James_Randi).
 
 **Douglas Geivett** — Professor Emeritus, Biola University; co-author of the
 cessationist critique cited in the [main article](?page=nar). Faculty profile:

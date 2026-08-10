@@ -26,69 +26,69 @@
       </div>
     </div>
 
-    <div class="site-map__item">
+    <a class="site-map__item" href="?page=introduction">
       <span class="site-map__nav-label">nav: Introduction</span>
       <div>
-        <strong><a href="?page=introduction">Introduction</a></strong>
+        <strong>Introduction</strong>
         <p>Why this site exists, and the author's background in the Shepherding movement — read this first.</p>
       </div>
-    </div>
+    </a>
 
-    <div class="site-map__item">
+    <a class="site-map__item" href="?page=nar">
       <span class="site-map__nav-label">nav: The NAR</span>
       <div>
-        <strong><a href="?page=nar">The New Apostolic Reformation</a></strong>
+        <strong>The New Apostolic Reformation</strong>
         <p>The main article: what NAR teaches, and where this site argues it goes wrong — with links to every person and source cited.</p>
       </div>
-    </div>
+    </a>
 
-    <div class="site-map__item">
+    <a class="site-map__item" href="?page=articles">
       <span class="site-map__nav-label">nav: Articles</span>
       <div>
-        <strong><a href="?page=articles">Articles</a></strong>
+        <strong>Articles</strong>
         <p>Every article on the site, full-text searchable — the fastest way to find a specific claim or topic.</p>
       </div>
-    </div>
+    </a>
 
-    <div class="site-map__item">
+    <a class="site-map__item" href="?page=about">
       <span class="site-map__nav-label">nav: About</span>
       <div>
-        <strong><a href="?page=about">About</a></strong>
+        <strong>About</strong>
         <p>The site's premise, what it is and isn't, and how to send a correction.</p>
       </div>
-    </div>
+    </a>
 
-    <div class="site-map__item">
+    <a class="site-map__item" href="?page=docs">
       <span class="site-map__nav-label">nav: Doc</span>
       <div>
-        <strong><a href="?page=docs">Doc</a></strong>
+        <strong>Doc</strong>
         <p>Reference material: a glossary of terms, every person/organization named (with verified links), sources, and a timeline.</p>
       </div>
-    </div>
+    </a>
 
-    <div class="site-map__item">
+    <a class="site-map__item" href="?page=issues">
       <span class="site-map__nav-label">nav: Issues</span>
       <div>
-        <strong><a href="?page=issues">Issues</a></strong>
+        <strong>Issues</strong>
         <p>Open bugs and corrections, pulled live from GitHub. Click "+ New Issue" to report something wrong.</p>
       </div>
-    </div>
+    </a>
 
-    <div class="site-map__item">
+    <a class="site-map__item" href="errors-viewer.html">
       <span class="site-map__nav-label">nav: Error Log</span>
       <div>
-        <strong><a href="errors-viewer.html">Error Log</a></strong>
+        <strong>Error Log</strong>
         <p>Automatic record of runtime errors on this site — mostly useful for whoever's maintaining it, not readers.</p>
       </div>
-    </div>
+    </a>
 
-    <div class="site-map__item">
+    <a class="site-map__item" href="?page=test">
       <span class="site-map__nav-label">nav: Test</span>
       <div>
-        <strong><a href="?page=test">Test</a></strong>
+        <strong>Test</strong>
         <p>The site's own automated test suite — click any test name to run it and see the result. Also for maintainers, not readers.</p>
       </div>
-    </div>
+    </a>
   </div>
 </div>
 
@@ -96,8 +96,10 @@
   .site-map { display: flex; flex-direction: column; gap: 0.75rem; margin-top: 1rem; }
   .site-map__item { display: grid; grid-template-columns: 140px 1fr; gap: 1rem; align-items: baseline; border: 1px solid var(--border-color); border-radius: 8px; background: var(--bg-secondary); padding: 0.9rem 1.1rem; }
   .site-map__nav-label { color: var(--text-secondary); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.03em; white-space: nowrap; }
-  .site-map__item strong a { color: var(--text-primary); text-decoration: none; font-size: 1.05rem; }
-  .site-map__item strong a:hover { color: var(--primary); text-decoration: underline; }
+  a.site-map__item { color: inherit; text-decoration: none; cursor: pointer; transition: border-color 0.15s, background 0.15s; }
+  a.site-map__item:hover { border-color: var(--primary); background: var(--bg-tertiary, var(--bg-secondary)); }
+  a.site-map__item:hover strong { color: var(--primary); text-decoration: underline; }
+  .site-map__item strong { display: block; color: var(--text-primary); font-size: 1.05rem; }
   .site-map__item p { margin: 0.25rem 0 0; color: var(--text-secondary); font-size: 0.9rem; line-height: 1.5; }
   @media (max-width: 600px) {
     .site-map__item { grid-template-columns: 1fr; gap: 0.25rem; }
