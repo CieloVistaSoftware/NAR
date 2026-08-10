@@ -8,39 +8,98 @@
     This site exists to lay out, plainly and with sources, where the New Apostolic
     Reformation gets its theology wrong — drawing on roughly 25 years of firsthand
     experience inside the wider charismatic movement, not just outside observation.
+    It's a critique, not a neutral encyclopedia entry — see the
+    <a href="?page=introduction">Introduction</a> for the full explanation of that.
   </p>
-  <p>
-    This is not a neutral encyclopedia entry. It's a critique. Where a claim is a
-    personal observation, it's labeled as one. Where it's a doctrinal or historical
-    claim, it's sourced. The two are never presented as the same kind of evidence —
-    but neither is this site pretending to have no position.
-  </p>
-</div>
-
-<div class="page__section home-featured">
-  <h2>Start here: Introduction</h2>
-  <p>
-    Why this site exists, and what to expect from it — written from roughly 25 years
-    inside the charismatic movement.
-  </p>
-  <p><a href="?page=introduction">Read the introduction →</a></p>
-</div>
-
-<div class="page__section home-featured">
-  <h2>The New Apostolic Reformation</h2>
-  <p>
-    An overview of the NAR: where the term comes from, what its proponents teach,
-    and the specific theological and practical errors this site takes issue with.
-  </p>
-  <p><a href="?page=nar">Read the article →</a></p>
 </div>
 
 <div class="page__section">
-  <p>
-    <a href="?page=articles">Browse and search all articles →</a>
-  </p>
+  <h2>Finding your way around</h2>
+  <p>Everything on this site, in the order most people should read it:</p>
+
+  <div class="site-map">
+    <div class="site-map__item">
+      <span class="site-map__nav-label">Home</span>
+      <div>
+        <strong>You are here.</strong>
+        <p>This page — a short introduction plus this map of everything else.</p>
+      </div>
+    </div>
+
+    <div class="site-map__item">
+      <span class="site-map__nav-label">(start here)</span>
+      <div>
+        <strong><a href="?page=introduction">Introduction</a></strong>
+        <p>Why this site exists, and the author's background in the Shepherding movement — read this first.</p>
+      </div>
+    </div>
+
+    <div class="site-map__item">
+      <span class="site-map__nav-label">(start here)</span>
+      <div>
+        <strong><a href="?page=nar">The New Apostolic Reformation</a></strong>
+        <p>The main article: what NAR teaches, and where this site argues it goes wrong — with links to every person and source cited.</p>
+      </div>
+    </div>
+
+    <div class="site-map__item">
+      <span class="site-map__nav-label">(not in the menu)</span>
+      <div>
+        <strong><a href="?page=articles">Articles</a></strong>
+        <p>Every article on the site, full-text searchable — the fastest way to find a specific claim or topic.</p>
+      </div>
+    </div>
+
+    <div class="site-map__item">
+      <span class="site-map__nav-label">nav: About</span>
+      <div>
+        <strong><a href="?page=about">About</a></strong>
+        <p>The site's premise, what it is and isn't, and how to send a correction.</p>
+      </div>
+    </div>
+
+    <div class="site-map__item">
+      <span class="site-map__nav-label">nav: Doc</span>
+      <div>
+        <strong><a href="?page=docs">Doc</a></strong>
+        <p>Reference material: a glossary of terms, every person/organization named (with verified links), sources, and a timeline.</p>
+      </div>
+    </div>
+
+    <div class="site-map__item">
+      <span class="site-map__nav-label">nav: Issues</span>
+      <div>
+        <strong><a href="?page=issues">Issues</a></strong>
+        <p>Open bugs and corrections, pulled live from GitHub. Click "+ New Issue" to report something wrong.</p>
+      </div>
+    </div>
+
+    <div class="site-map__item">
+      <span class="site-map__nav-label">nav: Error Log</span>
+      <div>
+        <strong><a href="errors-viewer.html">Error Log</a></strong>
+        <p>Automatic record of runtime errors on this site — mostly useful for whoever's maintaining it, not readers.</p>
+      </div>
+    </div>
+
+    <div class="site-map__item">
+      <span class="site-map__nav-label">nav: Test</span>
+      <div>
+        <strong><a href="?page=test">Test</a></strong>
+        <p>The site's own automated test suite — click any test name to run it and see the result. Also for maintainers, not readers.</p>
+      </div>
+    </div>
+  </div>
 </div>
 
 <style>
-  .home-featured { border: 1px solid var(--border-color); border-radius: 8px; background: var(--bg-secondary); padding: 1.25rem 1.5rem; }
+  .site-map { display: flex; flex-direction: column; gap: 0.75rem; margin-top: 1rem; }
+  .site-map__item { display: grid; grid-template-columns: 140px 1fr; gap: 1rem; align-items: baseline; border: 1px solid var(--border-color); border-radius: 8px; background: var(--bg-secondary); padding: 0.9rem 1.1rem; }
+  .site-map__nav-label { color: var(--text-secondary); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.03em; white-space: nowrap; }
+  .site-map__item strong a { color: var(--text-primary); text-decoration: none; font-size: 1.05rem; }
+  .site-map__item strong a:hover { color: var(--primary); text-decoration: underline; }
+  .site-map__item p { margin: 0.25rem 0 0; color: var(--text-secondary); font-size: 0.9rem; line-height: 1.5; }
+  @media (max-width: 600px) {
+    .site-map__item { grid-template-columns: 1fr; gap: 0.25rem; }
+  }
 </style>
