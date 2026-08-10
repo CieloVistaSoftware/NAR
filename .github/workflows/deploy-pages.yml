@@ -1,0 +1,43 @@
+name: Deploy GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      # Zero-build site -- nothing to compile. Only strip what a static
+      # host can't use anyway and shouldn't serve: server.js/scripts's own
+      # Node-only test-runner and error-log write endpoints don't exist on
+      # Pages (no server), the test suite and its node_modules are dev-only
+      # weight, and .git/.github aren't meant to be served as site content.
+      - name: Prepare static site content
+        run: |
+          mkdir -p _site
+          rsync -a --exclude='.git' --exclude='.github' --exclude='node_modules' \
+            --exclude='tests' --exclude='_site' --exclude='playwright-report' \
+            --exclude='test-results' ./ _site/
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - id: deployment
+        uses: actions/deploy-pages@v4
