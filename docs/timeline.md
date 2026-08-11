@@ -168,9 +168,7 @@ the underlying references.
   and contemporaneous journalism put the broader total, including adults,
   as high as 80–91. Freeman was himself indicted for reckless homicide in
   1984 and died before trial, of a condition — untreated diabetes, by one
-  account — his own teaching forbade him from treating. Full account,
-  originally written to answer a reader's question on this site's
-  [Issues](?page=issues) page, in
+  account — his own teaching forbade him from treating. Full account in
   [Hobart Freeman & Faith Assembly](?page=hobart-freeman).
 - **1987–1988** — Jim Bakker resigns from PTL after a hush-money payment to
   Jessica Hahn comes to light, and is later convicted on 24 counts of mail
