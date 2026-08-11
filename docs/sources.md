@@ -48,6 +48,16 @@ his 1974 book *Healing: A Doctor in Search of a Miracle*.
 [AlterNet on the 2012 Romney prediction](https://www.alternet.org/2012/11/pat-robertson-admits-he-blew-election-prediction-he-got-god),
 and [ABC News on the Haiti remarks](https://abcnews.go.com/GMA/HaitiEarthquake/white-house-advisor-valerie-jarrett-speechless-pat-robertson/story?id=9555714).
 
+**Kenneth Hagin** — [Wikipedia](https://en.wikipedia.org/wiki/Kenneth_E._Hagin);
+the plagiarism finding via
+[Christian Research Institute, "E.W. Kenyon and the Twelve Apostles of Another Gospel"](https://www.equip.org/articles/whats-wrong-with-the-word-faith-movement-part-one/)
+and the [Simmons/MacMillan comparison](https://www.pentecostaltheology.com/paul-king-john-a-macmillans-teaching-regarding-the-authority-of-the-believer-and-its-impact-on-the-evangelical-pentecostal-and-charismatic-movements/);
+the "Jesus Died Spiritually" doctrine's academic lineage via a
+[University of Edinburgh doctoral thesis](https://era.ed.ac.uk/handle/1842/2231);
+the movement's standard academic history, Kate Bowler's
+[*Blessed: A History of the American Prosperity Gospel*](https://global.oup.com/academic/product/blessed-9780190876739)
+(Oxford University Press, 2013).
+
 **Kenneth Copeland** — [Wikipedia](https://en.wikipedia.org/wiki/Kenneth_Copeland);
 the doctrine itself via
 [Christian Research Institute's detailed critique](https://www.equip.org/articles/whats-wrong-with-the-word-faith-movement-part-two/),

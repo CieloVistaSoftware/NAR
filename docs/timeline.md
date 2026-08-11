@@ -78,6 +78,26 @@ the underlying references.
   report it — a 2017 jury found Jan Crouch and TBN's parent corporation liable
   and awarded $2 million in damages. Paul and Jan's son Matt Crouch is TBN's
   current president and chairman.
+- **1934–2003** — Kenneth Hagin, widely credited as the father of the Word
+  of Faith movement, builds his teaching around a healing testimony from
+  his own youth and founds RHEMA Bible Training College (1974), the
+  training ground behind much of the modern prosperity-gospel landscape.
+  His signature doctrine — that believers are "the same class of being"
+  as God, "an incarnation" the same way Christ was — comes with a
+  documented text-critical problem: a 1984 academic study found his 1967
+  booklet closely paralleled a 1932 work by John A. MacMillan, and D.R.
+  McConnell's standard critical history, *A Different Gospel* (1988),
+  documents Hagin copying "word-for-word without documentation" from at
+  least eight of E.W. Kenyon's books. Hagin's own defense: the overlap was
+  "the same Spirit... leading and directing." He also taught that Christ's
+  spirit went to hell and was tormented by Satan for three days before
+  being "born again" there — a doctrine a 2007 University of Edinburgh
+  thesis traces directly from Kenyon through Hagin to Copeland, and finds
+  incompatible with the historic Christian understanding of the
+  incarnation and atonement. He died of a sudden cardiac event in 2003,
+  with no account found of his own ministry reckoning with what that means
+  for a doctrine built on guaranteed healing. Full account in
+  [Kenneth Hagin](?page=kenneth-hagin).
 - **1967–present** — Kenneth Copeland (b. 1936), a protégé of Word of Faith
   founder Kenneth Hagin, builds Kenneth Copeland Ministries into one of the
   most durable teachers of "positive confession": that healing and

@@ -63,6 +63,10 @@ ceased operations in 2016; documented via
 and the (Prosperity) Gospel* (2019). Current ministry:
 [forthegospel.org](https://www.forthegospel.org/).
 
+**Kenneth Hagin** (1917–2003) — RHEMA Bible Training College, now led by his
+son Kenneth Hagin Jr.: [rbtc.org](https://www.rbtc.org/). Full account:
+[Kenneth Hagin](?page=kenneth-hagin).
+
 **Kenneth Copeland** (b. 1936) — Kenneth Copeland Ministries:
 [kcm.org](https://www.kcm.org/). Full account:
 [Kenneth Copeland & "Enough Faith to Be Healed"](?page=kenneth-copeland).
