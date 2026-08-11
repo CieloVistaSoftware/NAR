@@ -155,6 +155,73 @@ the underlying references.
   history, has formally recognized only 64 as medically inexplicable after
   its own physician-led review — a rigor that on-air healing segments on these
   networks have never been subjected to.
+- **Beyond healing claims** — The pattern above isn't limited to healing
+  claims specifically. The wider charismatic movement's habit of vesting
+  enormous, unaccountable authority in a single leader has produced a long
+  record of financial fraud, sexual abuse, and cover-ups, spanning decades
+  and continuing into the present:
+- **1987–1988** — Jim Bakker resigns from PTL after a hush-money payment to
+  Jessica Hahn comes to light, and is later convicted on 24 counts of mail
+  and wire fraud for overselling Heritage USA "lifetime partnerships." Six
+  months later, Jimmy Swaggart delivers a televised "I have sinned"
+  confession after being photographed with a prostitute, is defrocked by the
+  Assemblies of God for refusing to complete his suspension, and — after a
+  second, nearly identical scandal in 1991 — tells his congregation "the
+  Lord told me it's flat none of your business." Full account, including the
+  fraud scheme's mechanics and what happened to both men afterward, in
+  [Jim Bakker & Jimmy Swaggart](?page=bakker-swaggart).
+- **2006** — Ted Haggard, president of the National Association of
+  Evangelicals and founder of New Life Church, resigns after a male escort
+  publicly alleges a three-year sexual relationship and drug purchases. His
+  church-run "restoration" process has no actual enforcement power: he ends
+  it unilaterally in 2008, launches an independent church in 2010, and faces
+  nearly identical allegations again in 2022 — refusing to step down either
+  time. Full account in [Ted Haggard](?page=ted-haggard).
+- **2008** — At the height of the Lakeland Revival, NAR founder C. Peter
+  Wagner personally leads a public ceremony commissioning Todd Bentley,
+  declaring his "authority will increase, your favor will increase." Weeks
+  later Bentley's marriage collapses amid an affair with a staff member; a
+  hasty restoration process readmits him to ministry within about a year,
+  and a second, more serious 2019 disqualification for a pattern of sexual
+  misconduct still didn't stop him from being invited back to preach at a
+  major NAR-adjacent conference in 2024. Full account in
+  [Todd Bentley & the Lakeland Revival](?page=todd-bentley-lakeland).
+- **2008–2017** — Federal agents raid Tony Alamo's Arkansas compound,
+  removing six girls aged 10–17; he's convicted of transporting minors
+  across state lines for sex, with trial testimony describing him "marrying"
+  girls as young as 8 and 9. A 2014 Arkansas court awards his surviving
+  victims a $525 million judgment — reportedly the largest personal-injury
+  award in the state's history. Full account in [Tony Alamo](?page=tony-alamo).
+- **2010–2017** — Bishop Eddie Long, whose 25,000-member New Birth
+  Missionary Baptist Church made him one of the country's most prominent
+  Black megachurch pastors, settles civil lawsuits from five young men who
+  say he used his role as their spiritual mentor to coerce them into sexual
+  relationships as teenagers. He never admits wrongdoing and remains pastor
+  until his 2017 death. Full account in [Bishop Eddie Long & New Birth](?page=eddie-long).
+- **2020–2023** — Hillsong Church, whose worship music shaped charismatic
+  Christianity globally, comes apart: Carl Lentz is fired from Hillsong NYC
+  after an affair, followed by a leaked internal report documenting a
+  broader pattern of misconduct; founder Brian Houston is charged with (and
+  later acquitted of) concealing his father's child sex abuse, then
+  separately resigns over unrelated personal conduct. The U.S. network loses
+  most of its campuses to independence in the years that follow. Full
+  account in [Hillsong: Brian Houston & Carl Lentz](?page=hillsong).
+- **2023–2025** — Mike Bickle, founder of the International House of Prayer
+  Kansas City and a charter member of C. Peter Wagner's own Apostolic
+  Council of Prophetic Elders, is accused by multiple women of decades of
+  sexual abuse. An independent investigation funded by an outside
+  organization — IHOP-KC itself never fully endorsed the findings —
+  concludes he abused 17 survivors and that leadership used internal
+  "accountability" meetings to silence victims rather than investigate him.
+  Full account, including direct commentary connecting this case to NAR's
+  apostolic governance model, in [Mike Bickle & IHOP-KC](?page=mike-bickle-ihopkc).
+- **2024–2026** — Robert Morris resigns as senior pastor of Gateway Church,
+  one of the country's largest megachurches, after Cindy Clemishire
+  publicly says he abused her starting at age 12 in 1982. Unlike most cases
+  on this site, this one reaches an actual criminal conviction: an Oklahoma
+  grand jury indicts him in 2025, he pleads guilty to five felony counts,
+  and is sentenced to prison time followed by years of probation. Full
+  account in [Robert Morris & Gateway Church](?page=robert-morris-gateway).
 - **1970s** — The Shepherding (Discipleship) movement takes shape around Derek
   Prince, Bob Mumford, Don Basham, Charles Simpson, and Ern Baxter (the "Fort
   Lauderdale" teachers), teaching direct personal submission to an assigned

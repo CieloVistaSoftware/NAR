@@ -77,6 +77,42 @@ successor was found as of this writing.
 **Perry Stone** — Voice of Evangelism / *Manna-Fest*:
 [perrystone.org](https://perrystone.org/).
 
+## Broader charismatic-church scandals
+
+**Jim Bakker** (b. 1940) — post-prison ministry: [jimbakkershow.com](https://jimbakkershow.com/).
+Full account: [Jim Bakker & Jimmy Swaggart](?page=bakker-swaggart).
+
+**Jimmy Swaggart** (1935–2025) — Jimmy Swaggart Ministries:
+[jsm.org](https://jsm.org/), SonLife Broadcasting Network:
+[sonlifetv.com](https://www.sonlifetv.com/). Full account:
+[Jim Bakker & Jimmy Swaggart](?page=bakker-swaggart).
+
+**Ted Haggard** — no reliably confirmed current ministry site found for
+Storyhouse Church at the time this page was written. Full account:
+[Ted Haggard](?page=ted-haggard).
+
+**Todd Bentley** — reportedly operating as Revival Harvest Ministries as of
+recent reporting; no site independently verified for this page. Full
+account: [Todd Bentley & the Lakeland Revival](?page=todd-bentley-lakeland).
+
+**Tony Alamo** (1934–2017) — died in federal prison; no verified current
+organizational presence found. Full account: [Tony Alamo](?page=tony-alamo).
+
+**Bishop Eddie Long** (1953–2017) — died in office as pastor of New Birth
+Missionary Baptist Church. Full account:
+[Bishop Eddie Long & New Birth](?page=eddie-long).
+
+**Hillsong Church** — [hillsong.com](https://hillsong.com/). Full account:
+[Hillsong: Brian Houston & Carl Lentz](?page=hillsong).
+
+**Mike Bickle** — founder of International House of Prayer Kansas City,
+which continues under new leadership: [ihopkc.org](https://www.ihopkc.org/).
+Full account: [Mike Bickle & IHOP-KC](?page=mike-bickle-ihopkc).
+
+**Robert Morris** — no ministry site listed; released from custody in 2026
+to begin probation. Full account:
+[Robert Morris & Gateway Church](?page=robert-morris-gateway).
+
 ## Critics and researchers
 
 **James Randi** (1928–2020) — magician and investigator; author of *The Faith

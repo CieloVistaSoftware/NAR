@@ -91,6 +91,59 @@ reporting.
 hidden-earpiece exposure at
 [Wikipedia: Peter Popoff](https://en.wikipedia.org/wiki/Peter_Popoff).
 
+## Broader charismatic-church scandals (Bakker & Swaggart, Haggard, Bentley, Alamo, Long, Hillsong, Bickle, Morris)
+
+**Jim Bakker & Jimmy Swaggart** — [Wikipedia: Jim Bakker](https://en.wikipedia.org/wiki/Jim_Bakker),
+[Wikipedia: Jimmy Swaggart](https://en.wikipedia.org/wiki/Jimmy_Swaggart); the
+fraud conviction via
+[Washington Post archive, 1989](https://www.washingtonpost.com/archive/politics/1989/10/06/bakker-convicted-on-all-24-fraud-conspiracy-counts/15920f2a-3a99-4ce6-976e-1cd388fd70e4/);
+the 2020 Silver Solution lawsuit via
+[NPR](https://www.npr.org/2020/03/11/814550474/missouri-sues-televangelist-jim-bakker-for-selling-fake-coronavirus-cure);
+Swaggart's "flat none of your business" quote corroborated at
+[Baptist News Global](https://baptistnews.com/article/the-lord-told-me-its-flat-none-of-your-business-jimmy-swaggarts-scandalous-legacy/).
+
+**Ted Haggard** — [Wikipedia](https://en.wikipedia.org/wiki/Ted_Haggard); resignation via
+[Religion News Service](https://religionnews.com/2006/11/04/haggard-resigns-from-nae-after-gay-sex-allegations/);
+the 2008 restoration process ending via
+[Christian Post](https://www.christianpost.com/news/haggard-ends-restoration-process-with-overseers.html);
+2022 allegations via
+[Colorado Springs Gazette](https://gazette.com/news/crime/powerhouse-preacher-ted-haggard-faces-new-allegations-of-illicit-behavior/article_e7637edc-0aab-11ed-ac8c-c31007228c88.html).
+
+**Todd Bentley & the Lakeland Revival** — [Wikipedia: Todd Bentley](https://en.wikipedia.org/wiki/Todd_Bentley),
+[Wikipedia: Lakeland Revival](https://en.wikipedia.org/wiki/Lakeland_Revival); the
+Wagner commissioning ceremony via a contemporaneous
+[CBN report](https://www1.cbn.com/ChurchWatch/archive/2008/06/25/apostolic-leaders-commission-lakeland-revival-leader-todd-bentley);
+the 2024 MorningStar re-platforming via
+[The Roys Report](https://roysreport.com/morningstar-ministry-faces-backlash-platforming-disgraced-preacher-todd-bentley/).
+
+**Tony Alamo** — [Encyclopedia of Arkansas](https://encyclopediaofarkansas.net/entries/tony-alamo-4224/);
+the 2009 conviction via
+[NPR](https://www.npr.org/sections/thetwo-way/2009/11/175year_sentence_for_evangelis.html);
+the 2014 civil judgment via
+[Washington Times](https://www.washingtontimes.com/news/2014/mar/21/ark-judge-orders-alamo-to-pay-525-million/).
+
+**Bishop Eddie Long** — [Wikipedia](https://en.wikipedia.org/wiki/Eddie_Long); the
+lawsuits via [NBC News](https://www.nbcnews.com/id/wbna39346313); the settlement via
+[Southern Poverty Law Center](https://www.splcenter.org/resources/hatewatch/bishop-eddie-long-settles-lawsuit-alleging-sexual-misconduct/).
+
+**Hillsong (Brian Houston & Carl Lentz)** — the concealment charge and acquittal via
+[Washington Post](https://www.washingtonpost.com/religion/2023/08/17/hillsong-brian-houston-acquittal/);
+Lentz's firing via [Refinery29](https://www.refinery29.com/en-us/2020/11/10149947/carl-lentz-fired-hillsong-church-scandal);
+the leaked internal report via
+[Religion News Service](https://religionnews.com/2022/04/11/leaked-hillsong-nyc-report-says-sexual-misconduct-abuse-went-beyond-carl-lentz/).
+
+**Mike Bickle & IHOP-KC** — [Wikipedia: International House of Prayer](https://en.wikipedia.org/wiki/International_House_of_Prayer);
+his ACPE charter membership via
+[Political Research Associates](https://politicalresearch.org/2014/03/24/profile-right-mike-bickle-founder-international-house-prayer);
+the Firefly investigation findings via
+[The Roys Report](https://roysreport.com/breaking-ihopkc-founder-mike-bickle-sexually-abused-17-women-investigation-finds/).
+
+**Robert Morris & Gateway Church** — original account via
+[The Wartburg Watch](https://thewartburgwatch.com/2024/06/14/i-was-12-years-old-and-wearing-my-pink-pajamas-when-robert-morris-now-of-gateway-church-began-to-molest-me-the-alleged-abuse-lasted-for-4-1-2-years-churchtoo-arctoo/);
+the indictment via [Texas Tribune](https://www.texastribune.org/2025/03/12/robert-morris-texas-megachurch-indicted-sexual-abuse/);
+the guilty plea and sentence via
+[Religion Unplugged](https://religionunplugged.com/news/2025/10/3/texas-megachurch-pastor-robert-morris-pleads-guilty-to-child-sex-abuse).
+
 ## Journalism
 
 **Right Wing Watch** maintains an ongoing, dedicated topic page tracking NAR:

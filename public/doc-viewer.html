@@ -220,6 +220,11 @@
         const href = a.getAttribute('href');
         if (!href || href.startsWith('#') || /^[a-z][a-z0-9+.-]*:/i.test(href)) return; // anchors / scheme (http:, mailto:)
         if (/\.md(#.*)?$/i.test(href)) return; // .md → handled by the click interceptor
+        // "?page=x" is SPA-root-relative navigation, not a doc resource --
+        // rebasing it against docBaseDir (the doc's own directory) sent it to
+        // docs/?page=x, a route that doesn't exist. Resolve against SITE_ROOT
+        // instead so it lands at the actual app root.
+        if (href.startsWith('?')) { a.href = new URL(href, SITE_ROOT).href; return; }
         a.href = new URL(href, docBaseDir).href;
       });
       content.querySelectorAll('img[src], source[src], video[src], audio[src]').forEach((el) => {
