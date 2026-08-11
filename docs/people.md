@@ -79,6 +79,10 @@ successor was found as of this writing.
 
 ## Broader charismatic-church scandals
 
+**Hobart Freeman** (1920–1984) — died before trial; no surviving ministry
+site (Faith Assembly's status today is not confirmed). Full account:
+[Hobart Freeman & Faith Assembly](?page=hobart-freeman).
+
 **Jim Bakker** (b. 1940) — post-prison ministry: [jimbakkershow.com](https://jimbakkershow.com/).
 Full account: [Jim Bakker & Jimmy Swaggart](?page=bakker-swaggart).
 

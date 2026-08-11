@@ -91,7 +91,15 @@ reporting.
 hidden-earpiece exposure at
 [Wikipedia: Peter Popoff](https://en.wikipedia.org/wiki/Peter_Popoff).
 
-## Broader charismatic-church scandals (Bakker & Swaggart, Haggard, Bentley, Alamo, Long, Hillsong, Bickle, Morris)
+## Broader charismatic-church scandals (Freeman, Bakker & Swaggart, Haggard, Bentley, Alamo, Long, Hillsong, Bickle, Morris)
+
+**Hobart Freeman & Faith Assembly** — [Wikipedia: Hobart Freeman](https://en.wikipedia.org/wiki/Hobart_Freeman),
+[Wikipedia: Faith Assembly Church of Wilmot, Indiana](https://en.wikipedia.org/wiki/Faith_Assembly_Church_of_Wilmot,_Indiana);
+the child-fatality count via the peer-reviewed
+[Asser & Swan, *Pediatrics*, 1998 (PubMed)](https://pubmed.ncbi.nlm.nih.gov/9521945/);
+Freeman's indictment and death via
+[Christianity Today, Nov 1984](https://www.christianitytoday.com/ct/1984/november-23/indiana-grand-jury-indicts-faith-healing-preacher.html)
+and [Jan 1985](https://www.christianitytoday.com/1985/01/leaders-death-gives-rise-to-speculation-about-future-of/).
 
 **Jim Bakker & Jimmy Swaggart** — [Wikipedia: Jim Bakker](https://en.wikipedia.org/wiki/Jim_Bakker),
 [Wikipedia: Jimmy Swaggart](https://en.wikipedia.org/wiki/Jimmy_Swaggart); the

@@ -160,6 +160,18 @@ the underlying references.
   enormous, unaccountable authority in a single leader has produced a long
   record of financial fraud, sexual abuse, and cover-ups, spanning decades
   and continuing into the present:
+- **1960s–1984** — Hobart Freeman founds Faith Assembly in Wilmot, Indiana,
+  teaching that medications are "demonic" and requiring members to undergo
+  ritual "deliverance" from any medicine they'd ever taken. A peer-reviewed
+  1998 study found Faith Assembly responsible for 64 documented child
+  deaths, 1975–1995 — the highest count of any religious group studied —
+  and contemporaneous journalism put the broader total, including adults,
+  as high as 80–91. Freeman was himself indicted for reckless homicide in
+  1984 and died before trial, of a condition — untreated diabetes, by one
+  account — his own teaching forbade him from treating. Full account,
+  originally written to answer a reader's question on this site's
+  [Issues](?page=issues) page, in
+  [Hobart Freeman & Faith Assembly](?page=hobart-freeman).
 - **1987–1988** — Jim Bakker resigns from PTL after a hush-money payment to
   Jessica Hahn comes to light, and is later convicted on 24 counts of mail
   and wire fraud for overselling Heritage USA "lifetime partnerships." Six
