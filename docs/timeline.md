@@ -78,6 +78,29 @@ the underlying references.
   report it — a 2017 jury found Jan Crouch and TBN's parent corporation liable
   and awarded $2 million in damages. Paul and Jan's son Matt Crouch is TBN's
   current president and chairman.
+- **1967–present** — Kenneth Copeland (b. 1936), a protégé of Word of Faith
+  founder Kenneth Hagin, builds Kenneth Copeland Ministries into one of the
+  most durable teachers of "positive confession": that healing and
+  prosperity are guaranteed to any believer with sufficient faith, and that
+  failure to receive them reflects the believer's deficiency, not the
+  doctrine's. On *Larry King Live*, asked why healing sometimes doesn't
+  happen, Copeland said "the receiving is on our part... if we are not
+  receiving, then there is a misconnection" — placing the failure
+  permanently on the believer's side. A 2013 measles outbreak at his own
+  Eagle Mountain International Church, tied directly to congregants
+  declining vaccination on faith grounds, and a woman's 2004 cancer death
+  after refusing treatment specifically because of Copeland's television
+  broadcasts, are both documented. Copeland himself has preached he would
+  "never be sick another day" in his life, then revealed a pacemaker in
+  2022; he has publicly predicted he'll live to 120. A three-year U.S.
+  Senate Finance Committee investigation (2007–2011) found Copeland stating
+  on an internal video that he is personally "a billionaire," with the
+  ministry receiving an estimated $80–90 million a year and Copeland
+  holding unilateral veto power over his own church's board — the
+  investigation closed with no penalties, not because nothing troubling
+  was found, but because Committee staff said witnesses were too afraid of
+  retaliation to testify. Full account in
+  [Kenneth Copeland & "Enough Faith to Be Healed"](?page=kenneth-copeland).
 - **1983–present** — Benny Hinn (b. 1952, Jaffa, Israel) becomes the most
   visible living faith healer in the Kuhlman tradition. He attended a Kuhlman
   service in Pittsburgh in 1973 and later wrote a book crediting her as his

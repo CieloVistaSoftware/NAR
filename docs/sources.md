@@ -48,6 +48,23 @@ his 1974 book *Healing: A Doctor in Search of a Miracle*.
 [AlterNet on the 2012 Romney prediction](https://www.alternet.org/2012/11/pat-robertson-admits-he-blew-election-prediction-he-got-god),
 and [ABC News on the Haiti remarks](https://abcnews.go.com/GMA/HaitiEarthquake/white-house-advisor-valerie-jarrett-speechless-pat-robertson/story?id=9555714).
 
+**Kenneth Copeland** — [Wikipedia](https://en.wikipedia.org/wiki/Kenneth_Copeland);
+the doctrine itself via
+[Christian Research Institute's detailed critique](https://www.equip.org/articles/whats-wrong-with-the-word-faith-movement-part-two/),
+which cites Copeland's own books and broadcasts with page/tape citations;
+the Larry King Live transcript via
+[Spiritwatch.org](https://spiritwatch.org/firekcnn.htm);
+the 2013 Eagle Mountain measles outbreak via
+[Fox News](https://www.foxnews.com/us/measles-cases-put-texas-megachurch-under-scrutiny.print)
+and [Christianity Today](https://www.christianitytoday.com/2013/09/measles-outbreak-megachurch-kenneth-copeland-vaccines/);
+the Senate Finance Committee's own investigative report, a primary
+government document, at
+[finance.senate.gov](https://www.finance.senate.gov/download/copeland-summary&download=1);
+the parsonage-exempt mansion via
+[Religion Unplugged](https://religionunplugged.com/news/2021/12/27/texas-pastor-kenneth-copeland-pays-no-taxes-on-7-million-dollar-mansion);
+the 120-year longevity claim and 2024 hospitalization via
+[Christian Post](https://www.christianpost.com/news/televangelist-kenneth-copeland-predicts-when-he-will-die.html).
+
 **Benny Hinn** — [Wikipedia](https://en.wikipedia.org/wiki/Benny_Hinn); the 1990
 Trinity retraction via
 [Christianity Today, Oct 1991](https://www.christianitytoday.com/1991/10/benny-hinn-best-selling-author-admits-mistakes-vows-changes/);

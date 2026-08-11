@@ -63,6 +63,10 @@ ceased operations in 2016; documented via
 and the (Prosperity) Gospel* (2019). Current ministry:
 [forthegospel.org](https://www.forthegospel.org/).
 
+**Kenneth Copeland** (b. 1936) — Kenneth Copeland Ministries:
+[kcm.org](https://www.kcm.org/). Full account:
+[Kenneth Copeland & "Enough Faith to Be Healed"](?page=kenneth-copeland).
+
 **Pat Robertson** (1930–2023) — founder of CBN, now led by his son:
 [cbn.com](https://cbn.com/). *The 700 Club*'s own show history:
 [cbn.com/700club](https://secure.cbn.com/700club/ShowInfo/About/about700club.asp).
