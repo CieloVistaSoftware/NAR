@@ -231,11 +231,17 @@ app.get('/pages/:page', (req, res, next) => {
   const pageName = req.params.page;
   if (!pageName.endsWith('.html')) return next();
 
-  // Detect direct browser navigation vs SPA fetch
-  // Sec-Fetch-Mode: 'navigate' is the modern standard
-  // Fallback: Check Accept header for text/html
-  const isNavigation = req.headers['sec-fetch-mode'] === 'navigate' || 
-                       (req.headers['accept'] && req.headers['accept'].includes('text/html'));
+  // Detect direct browser navigation vs SPA fetch via Sec-Fetch-Mode, a
+  // browser-generated Fetch Metadata header a script cannot override --
+  // real navigations send 'navigate', fetch() always sends 'cors' or
+  // 'same-origin'. An earlier Accept-header fallback ("includes text/html")
+  // was removed: at least one fetch() implementation (seen in this repo's
+  // own automated browser tooling) sends an Accept header containing
+  // text/html on plain fetch() calls, which made the SPA's own internal
+  // pages/<id>.html fetch intermittently receive the standalone-wrapped
+  // document instead of the raw fragment -- confirmed by curl reproducing
+  // it directly (Accept: text/html triggers the wrap; Accept: */* doesn't).
+  const isNavigation = req.headers['sec-fetch-mode'] === 'navigate';
 
   if (isNavigation) {
     const filePath = path.join(rootDir, 'pages', pageName);

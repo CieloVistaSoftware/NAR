@@ -152,7 +152,11 @@ the underlying references.
   reversal after his 1990 Trinity retraction. His own nephew, Costi Hinn,
   left the family ministry and published *God, Greed, and the (Prosperity)
   Gospel* (2019), calling prosperity teaching "the most hateful and abusive
-  kind of false teaching plaguing the church today."
+  kind of false teaching plaguing the church today." A much deeper look at
+  the healing-claim investigations specifically — five separate
+  investigative teams across three countries and 25 years, all reaching
+  the same conclusion — is in
+  [Benny Hinn: Has He Ever Healed Anyone?](?page=benny-hinn-healings).
 - **1997–present** — Marcus and Joni Lamb launch Daystar Television Network
   out of Bedford, Texas, funded in part by Kenneth Copeland Ministries and
   built around the same prosperity/Word of Faith programming roster as TBN
@@ -198,6 +202,21 @@ the underlying references.
   history, has formally recognized only 64 as medically inexplicable after
   its own physician-led review — a rigor that on-air healing segments on these
   networks have never been subjected to.
+- **Why people claim it worked anyway** — Word of Faith doctrine doesn't
+  just fail to produce verified healings; it's built with an explicit
+  mechanism for what happens when a claimed healing doesn't hold up.
+  Kenneth Copeland Ministries' own published prayer scripts instruct
+  believers: "I'm not moved by what I see, feel or experience... though I
+  haven't yet seen the physical results, I know I have them." Duke
+  historian Kate Bowler, later diagnosed with stage IV cancer while
+  researching the movement academically, summarized the effect plainly:
+  "In a spiritual world in which healing is a divine right, illness is a
+  symptom of unconfessed sin." William Vandenkolk, declared healed of
+  blindness on stage by Benny Hinn at age 9, was found still legally blind
+  years later by ABC's *Nightline* — his own account: "I got caught up in
+  the moment... this really didn't happen." Full account, answering a
+  reader's question, in
+  [Will Word of Faith Adherents Lie About Healing?](?page=wof-confession-and-healing).
 - **Beyond healing claims** — The pattern above isn't limited to healing
   claims specifically. The wider charismatic movement's habit of vesting
   enormous, unaccountable authority in a single leader has produced a long
@@ -268,6 +287,17 @@ the underlying references.
   "accountability" meetings to silence victims rather than investigate him.
   Full account, including direct commentary connecting this case to NAR's
   apostolic governance model, in [Mike Bickle & IHOP-KC](?page=mike-bickle-ihopkc).
+- **2019–2025** — Charismatic apologist Michael Brown organizes and oversees
+  the accountability process that gets Todd Bentley declared "disqualified
+  from ministry" in January 2020 — a genuine, if imperfectly enforced, case
+  of the movement policing its own. Brown also defends several NAR-adjacent
+  leaders by name and later mediates, unsuccessfully, in the Mike Bickle
+  scandal above. In November 2024, Brown himself steps back from ministry
+  after misconduct allegations surface; an independent investigator's April
+  2025 report calls it "sexually abusive misconduct" against two women — a
+  hand-picked elder team then overrides that finding, calls it "moral
+  indiscretions," and recommends his return to ministry. Full account in
+  [Michael Brown](?page=michael-brown).
 - **2024–2026** — Robert Morris resigns as senior pastor of Gateway Church,
   one of the country's largest megachurches, after Cindy Clemishire
   publicly says he abused her starting at age 12 in 1982. Unlike most cases

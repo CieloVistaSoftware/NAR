@@ -57,7 +57,9 @@ ceased operations in 2016; documented via
 
 **Benny Hinn** (b. 1952) — Benny Hinn Ministries:
 [bennyhinn.org](https://www.bennyhinn.org/). Documented via
-[Wikipedia](https://en.wikipedia.org/wiki/Benny_Hinn).
+[Wikipedia](https://en.wikipedia.org/wiki/Benny_Hinn). Deep dive on his
+healing claims specifically:
+[Benny Hinn: Has He Ever Healed Anyone?](?page=benny-hinn-healings).
 
 **Costi Hinn** — Benny Hinn's nephew and public critic; author of *God, Greed,
 and the (Prosperity) Gospel* (2019). Current ministry:
@@ -116,6 +118,10 @@ Missionary Baptist Church. Full account:
 
 **Hillsong Church** — [hillsong.com](https://hillsong.com/). Full account:
 [Hillsong: Brian Houston & Carl Lentz](?page=hillsong).
+
+**Michael Brown** — Line of Fire / AskDrBrown Ministries:
+[askdrbrown.org](https://askdrbrown.org/). Full account:
+[Michael Brown](?page=michael-brown).
 
 **Mike Bickle** — founder of International House of Prayer Kansas City,
 which continues under new leadership: [ihopkc.org](https://www.ihopkc.org/).

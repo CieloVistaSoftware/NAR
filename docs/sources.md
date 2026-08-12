@@ -88,6 +88,28 @@ ongoing financial-transparency findings via
 his nephew Costi Hinn's account via *God, Greed, and the (Prosperity) Gospel*
 (Zondervan, 2019).
 
+**Benny Hinn, healing-claim investigations** — HBO's *A Question of
+Miracles* via [Wikipedia: Benny Hinn](https://en.wikipedia.org/wiki/Benny_Hinn);
+Justin Peters' account via
+[D Magazine, "The Heretic"](https://www.dmagazine.com/publications/d-magazine/2003/august/the-heretic/);
+William Vandenkolk's case via
+[ABC News/Nightline](https://abcnews.com/amp/Nightline/benny-hinn-evangelical-leader-senate-investigation-speaks/story?id=8862027);
+William Lobdell's LA Times investigation via a
+[culteducation.com mirror](https://culteducation.com/group/1259-benny-hinn/9724-the-price-of-healing.html)
+(original latimes.com archive link could not be verified live); the 2006
+Copenhagen investigation via the
+[James Randi Educational Foundation](https://archive.randi.org/site/jr/2006-05/051206benny.html);
+Joe Nickell's analysis via
+[Skeptical Inquirer](https://skepticalinquirer.org/2002/05/benny-hinn-healer-or-hypnotist/).
+
+**Word of Faith "positive confession" and the psychology of claiming
+healing** — Kenneth Copeland Ministries' own confession scripts at
+[kcm.org](https://www.kcm.org/real-help/faith/speak/faith-confessions);
+Kate Bowler's account via
+[Christian Century](https://www.christiancentury.org/books/kate-bowler-faces-against-cancer-and-bad-theology);
+Costi Hinn's account via
+[Eternal Perspective Ministries](https://www.epm.org/resources/2019/Jul/24/prosperity-gospel-costi-hinn/).
+
 **Trinity Broadcasting Network** — [Wikipedia](https://en.wikipedia.org/wiki/Trinity_Broadcasting_Network);
 the Koper lawsuit via
 [Christian Post](https://www.christianpost.com/news/tbn-execs-threatened-founders-granddaughter-with-gun-fired-her-for-refusing-to-skim-100m-of-charitable-assets-lawsuit-claims.html);
@@ -166,6 +188,15 @@ lawsuits via [NBC News](https://www.nbcnews.com/id/wbna39346313); the settlement
 Lentz's firing via [Refinery29](https://www.refinery29.com/en-us/2020/11/10149947/carl-lentz-fired-hillsong-church-scandal);
 the leaked internal report via
 [Religion News Service](https://religionnews.com/2022/04/11/leaked-hillsong-nyc-report-says-sexual-misconduct-abuse-went-beyond-carl-lentz/).
+
+**Michael Brown** — [Wikipedia](https://en.wikipedia.org/wiki/Michael_L._Brown);
+the Bentley panel's statement via
+[Christian Post](https://www.christianpost.com/voices/official-statement-from-the-leadership-panel-on-todd-bentley.html);
+his defense of NAR-adjacent leaders via
+[Holly Pivec](https://www.hollypivec.com/blog/michaelbrowndefendsnarleaders);
+the 2025 findings against him and the elder team's rejection of them via
+[MinistryWatch](https://ministrywatch.com/elder-team-recommends-dr-michael-brown-resume-public-ministry/)
+and [Bishop Accountability](https://www.bishop-accountability.org/2025/04/elder-team-rejects-sexual-abuse-findings-against-michael-brown-recommends-return-to-ministry/).
 
 **Mike Bickle & IHOP-KC** — [Wikipedia: International House of Prayer](https://en.wikipedia.org/wiki/International_House_of_Prayer);
 his ACPE charter membership via
